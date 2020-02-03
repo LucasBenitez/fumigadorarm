@@ -7,7 +7,18 @@ const iconFace = document.querySelector("#iconFace");
 const iconContact = document.querySelector("#iconContact");
 const inputContainerWsp = document.querySelector("#inputContainerWsp");
 
-iconWsp.addEventListener('click', (e) => {
+//
+
+const homeContent = document.querySelector("#homeContent");
+const formContainer = document.querySelector("#formContainer");
+
+iconContact.addEventListener('click', () => {
+    homeContent.classList.add('d-none');
+    formContainer.classList.toggle('d-none');
+});
+
+
+/*iconWsp.addEventListener('click', (e) => {
     console.log(e);
     iconWsp.classList.toggle('icon-translate');
     iconWsp.classList.toggle('active');
@@ -20,5 +31,17 @@ const buttonWsp = document.querySelector("#button-wsp");
 
 buttonWsp.addEventListener('click', () => {
     let { value } = document.querySelector("#wspMessage");
-    console.log(value);
+
+    let url = `https://api.whatsapp.com/send?phone=1155011250&text=${value}`
+    console.log(url);
 });
+
+function translateText(value) {
+    let valueArr = value.split(" ")
+    for (let i in valueArr) {
+        console.log(valueArr[i])
+    }
+    console.log(valueArr)
+}
+
+translateText("Hola que tal");*/
