@@ -11,11 +11,18 @@ const inputContainerWsp = document.querySelector("#inputContainerWsp");
 
 const homeContent = document.querySelector("#homeContent");
 const formContainer = document.querySelector("#formContainer");
+const homeBotton = document.querySelector("#homeButton");
 
 iconContact.addEventListener('click', () => {
-    homeContent.classList.add('d-none');
+    homeContent.classList.add('d-none', 'fadeOutLeft');
     formContainer.classList.toggle('d-none');
 });
+
+homeBotton.addEventListener('click', () => {
+    formContainer.classList.toggle('d-none', 'fadeOutLeft');
+    homeContent.classList.remove('d-none');
+});
+
 
 
 /*iconWsp.addEventListener('click', (e) => {
