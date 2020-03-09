@@ -15,6 +15,10 @@ body {
     }
 }
 
+.flex-1 {
+    flex: 1;
+}
+
 .bg-image-background {
     background: {
         image: url('../img/fumigacionBackground.jpg');
