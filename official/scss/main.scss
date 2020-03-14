@@ -19,6 +19,15 @@ body {
     flex: 1;
 }
 
+.bg-image-contact {
+    background: {
+        image: url('../img/tmb-fumigadon-con-clienta.jpg');
+        repeat: no-repeat;
+        position: center;
+        size: cover;
+    }
+}
+
 .bg-image-background {
     background: {
         image: url('../img/fumigacionBackground.jpg');
