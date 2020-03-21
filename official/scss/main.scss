@@ -1,4 +1,9 @@
 @import "@font-face";
+@import "@variables";
+@import "colors";
+@import "@mixins";
+@import "servicie";
+
 body {
     font-family: 'Open Sans' !important;
 }
@@ -47,6 +52,183 @@ body {
         left: 0;
         z-index: 1;
     }
+}
+
+.circle {
+    &-white {
+        background: {
+            color: white;
+        }
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        padding: 20px;
+        position: relative;
+        z-index: 2;
+        &-1 {
+            @extend .circle-white;
+            padding: 10px;
+        }
+    }
+}
+
+.icon-absolute {
+    &-bug {
+        bottom: 13em;
+        // Small devices (landscape phones, 576px and up)
+        @media (min-width: 576px) {
+            bottom: 11.5em;
+        }
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) {}
+        // Large devices (desktops, 992px and up)
+        @media (min-width: 992px) {}
+        // Extra large devices (large desktops, 1200px and up)
+        @media (min-width: 1200px) {}
+    }
+    &-check {
+        bottom: -2em;
+    }
+}
+
+.sub-box-absolute {
+    bottom: -4em;
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+        width: 300px !important;
+    }
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {}
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {}
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {}
+}
+
+.border {
+    &-red {
+        &-darken {
+            border: {
+                left: 5px solid darken($red, 1);
+                right: 5px solid darken($red, 1);
+                top: 5px solid darken($red, 1);
+            }
+        }
+    }
+    &-top {
+        &-white {
+            border: {
+                top: 2px solid white;
+            }
+        }
+    }
+    &-radius {
+        &-bottom {
+            border: {
+                bottom-right-radius: 15% !important;
+                bottom-left-radius: 15% !important;
+            }
+        }
+    }
+}
+
+.shadow {
+    box-shadow: 0px 0px 3px 2px rgba($color: #000000, $alpha: 0.3);
+    &-1 {
+        box-shadow: 0px 2px 4px 2px rgba($color: #000000, $alpha: 0.2);
+    }
+    &-top {
+        box-shadow: 0px 5px 3px 1px rgba($color: #000000, $alpha: 0.3);
+    }
+    &-bottom {
+        box-shadow: 0px 3px 3px 1px rgba($color: #000000, $alpha: 0.1);
+    }
+    &-inner {
+        &-top {
+            box-shadow: inset 0px 4px 4px 2px rgba($color: #000000, $alpha: 0.3);
+            position: relative;
+            i {
+                position: relative;
+                z-index: 3;
+            }
+            &::after {
+                content: "";
+                display: block;
+                width: 3rem;
+                height: 3rem;
+                background-color: white;
+                border-radius: 50%;
+                position: absolute;
+                top: 10px;
+                left: 0;
+                right: 0;
+                margin: auto;
+                clip-path: circle(70% at 1.7rem 10px);
+                z-index: -1;
+            }
+        }
+    }
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.bg-image-contact {
+    background: {
+        image: url('../img/tmb-fumigadon-con-clienta.jpg');
+        repeat: no-repeat;
+        position: center;
+        size: cover;
+    }
+}
+
+.bg-image-background {
+    background: {
+        image: url('../img/fumigacionBackground.jpg');
+        repeat: no-repeat;
+        size: cover;
+        position: center;
+    }
+    height: 100%;
+    &::after {
+        content: "";
+        display: block;
+        background-color: rgba($color: #000000, $alpha: 0.7);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+}
+
+.img-layout {
+    &-abs {
+        top: 0;
+        left: 0;
+        &:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #000000, $alpha: 0.7);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 5;
+        }
+    }
+}
+
+.text-layout-abs {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    margin: auto;
 }
 
 .img-layout {
