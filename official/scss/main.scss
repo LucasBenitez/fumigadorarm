@@ -2,8 +2,7 @@
 @import "@variables";
 @import "colors";
 @import "@mixins";
-@import "servicie";
-
+@import "services";
 body {
     font-family: 'Open Sans' !important;
 }
@@ -17,6 +16,18 @@ body {
     }
     .z-index-#{$i} {
         z-index: #{$i};
+    }
+    .bottom-#{$i} {
+        bottom:#{$i}px;
+    }
+    .top-#{$i} {
+        top:#{$i}px;
+    }
+    .left-#{$i} {
+        left: #{$i}px;
+    }
+    .right-#{$i} {
+        right: #{$i}px;
     }
 }
 
@@ -74,10 +85,10 @@ body {
 
 .icon-absolute {
     &-bug {
-        bottom: 13em;
+        bottom: 11rem;
         // Small devices (landscape phones, 576px and up)
         @media (min-width: 576px) {
-            bottom: 11.5em;
+            bottom: 9.5rem;
         }
         // Medium devices (tablets, 768px and up)
         @media (min-width: 768px) {}
@@ -92,7 +103,7 @@ body {
 }
 
 .sub-box-absolute {
-    bottom: -4em;
+    bottom: -4rem;
     // Small devices (landscape phones, 576px and up)
     @media (min-width: 576px) {
         width: 300px !important;

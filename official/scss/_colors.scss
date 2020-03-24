@@ -1,6 +1,6 @@
 .degrade {
     &-red {
-        background: linear-gradient(0turn, darken($red, 1) 30%,  $red 70%);
+        background: linear-gradient(0turn, darken($red, 1) 30%, $red 70%);
     }
 }
 
@@ -11,4 +11,8 @@
             color: darken($color: $red, $amount: 0.7);
         }
     }
+}
+
+.red {
+    background: $red !important;
 }

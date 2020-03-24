@@ -1,0 +1,60 @@
+extends ../templates/template.pug
+block append config
+    -subMenu = ["Chinches","Como saber si tengo chinches","Eliminar chinches","Como evitar las chinches", "Picadura de chinches"]
+    -
+        objBug = {
+            name: subMenu[0],
+            description: "en casa o en el hotel donde nos alojamos es uno de nuestros mayores miedos en cuanto a plagas debido a la dificultad que supone eliminarlas",
+            textPlus: "more sarasa"
+        }
+    -
+        cards = [
+            {
+                image: "chinches-1",
+                title: "Cómo evitar las chinches",
+                description: "Consejos prácticos y efectivos para evitar una plaga de chinches",
+                link: "#"
+            },
+            {
+                image: "chinches-2",
+                title: "Cómo eliminar chinches",
+                description: "Descubra cómo Rentokil puede ayudarle a eliminar una plaga de chinches",
+                link: "#"
+            },
+            {
+                image: "chinches-3",
+                title: "Picaduras de chinches",
+                description: "Cómo reconocer las picaduras de chinches",
+                link: "#"
+            }
+        ]
+
+block append content
+    +sub-navbar(subMenu)
+    
+    section.img-service-chinches
+        +text-bug(objBug)
+
+    section
+        .container
+            .row
+                .col-12
+                    .text-left.my-5
+                        h2 Chinches de cama
+                        hr.bg-dark.pt-1.w-100
+                        p
+                            | Encontrar chinches en casa o en el hotel donde nos alojamos es uno de nuestros mayores miedos en cuanto a plagas debido a la dificultad que supone eliminarlas, además de lo irritantes que son sus picaduras, llegando a provocar auténtica paranoia a dormir a los que han sufrido una plaga de chinches. Además una plaga de estos insectos también resulta muy irritante debido a su dificultad para realizar un control de la plaga completo, ya que no es posible hacerlo con remedios caseros, como sí es posible con ciertas infestaciones leves de otras plagas. Con las chinches sin embargo hay que realizar un tratamiento de desinsectación completo por parte de profesionales debidamente certificados y que poseen los permisos pertinentes para utilizar los productos necesarios.
+
+                        p
+                            | En los últimos años se ha producido un gran incremento en los casos de chinches encontrados debido al aumento de viajes tanto nacionales como internacionales. De hecho nosotros también hemos notado que el número de tratamientos de chinches realizados a particulares está superando el número de tratamientos realizados a empresas, principalmente establecimientos hoteleros.
+                        
+                        p
+                            | Un dato importante que avala el incremento de infestaciones por chinches, es que actualmente en Rentokil España las chinches son la tercera plaga en importancia según el análisis que realizamos sobre las llamadas recibidas en nuestra compañía. Nuestra dilatada experiencia en el sector, amplio conocimiento sobre plagas y la profesionalidad de todos nuestros trabajadores nos convierten en una apuesta más que fiable para tratar este tipo de plagas. 
+
+    section
+        .container
+            .row
+                +card-factory(cards)
+
+    +steps
+

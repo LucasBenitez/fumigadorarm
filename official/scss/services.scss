@@ -1,0 +1,44 @@
+    .img-service {
+        &-cucarachas {
+            @include big-img-page("../img/bugs/cucaracha.jpg", 0.5)
+        }
+        &-chinches {
+            @include big-img-page("../img/bugs/chinche.jpg", 0.5);
+            &-1 {
+                background: {
+                    image: url('../img/bugs/chinches-card.jpg');
+                    repeat: no-repeat;
+                    position: center;
+                    size: cover;
+                    color: transparent !important;
+                }
+                position: relative;
+                z-index: 1;
+                @include mask();
+            }
+            &-2 {
+                background: {
+                    image: url('../img/bugs/chinches-card-2.jpg');
+                    repeat: no-repeat;
+                    position: center;
+                    size: cover;
+                    color: transparent !important;
+                }
+                position: relative;
+                z-index: 1;
+                @include mask();
+            }
+            &-3 {
+                background: {
+                    image: url('../img/bugs/chinches-card-3.jpg');
+                    repeat: no-repeat;
+                    position: center;
+                    size: cover;
+                    color: transparent !important;
+                }
+                position: relative;
+                z-index: 1;
+                @include mask();
+            }
+        }
+    }
