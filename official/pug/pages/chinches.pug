@@ -5,7 +5,7 @@ block append config
         objBug = {
             name: subMenu[0],
             description: "en casa o en el hotel donde nos alojamos es uno de nuestros mayores miedos en cuanto a plagas debido a la dificultad que supone eliminarlas",
-            textPlus: "more sarasa"
+            textPlus: "Reconocidos en control de chinches de cama."
         }
     -
         cards = [
@@ -28,6 +28,37 @@ block append config
                 link: "#"
             }
         ]
+    -
+        questions = [
+                        {
+                        question:"¿Qué aspecto tienen las chinches?",
+                        answer:"Las chinches miden entre 5 y 6 mm de largo antes de comer, y pueden llegar a los 7 mm cuando se han alimentado, son ovaladas y aplanadas desde la parte posterior hasta la inferior, cuentan con unas patas gruesas bien desarrolladas y no tienen alas. También son de color marrón-rojizo."
+                        },
+                        {
+                        question:"¿Cuáles son las señales habituales de la presencia de chinches?",
+                        answer:"Las señales habituales de la presencia de chinches son la presencia de pequeñas manchas de sangre en las sábanas, bolitas fecales, un olor característico como a “enfermo” y, por supuesto, la detección de insectos vivos."
+                        },
+                        {
+                        question:"¿Existe algún riesgo potencial derivado de la presencia de chinches?",
+                        answer:"El peligro de las chinches es que pueden picar a sus clientes. Las chinches se mueven con mucha facilidad y, si no se tratan de forma profesional rápidamente, pueden alcanzar el nivel de plaga en poco tiempo. Las soluciones especializadas que solo están a disposición de las empresas profesionales dedicadas al control de plagas suponen la forma más fiable de deshacerse de las chinches Sin duda el riesgo mas importante es la pérdida de imagen que supone la aparición en medios de comunicación y redes sociales de la presencia de chinches en un establecimiento hotelero."
+                        },
+                        {
+                        question:"¿De qué se alimentan las chinches?",
+                        answer:"Las chinches se alimentan de la sangre humana."
+                        },
+                        {
+                        question:"¿Qué puedo hacer contra las chinches?",
+                        answer:"No es recomendable que trate de acabar con las chinches usted solo y debería buscar ayuda profesional. Es muy importante señalar que no hay remedios caseros. La rapidez con la que se actúe en básica para acabar con las chinches y eliminar el problema. Recuerde que lo más barato en la mayoría de las ocasiones no es lo mejor."
+                        },
+                        {
+                        question:"¿Cuál es el mejor tratamiento?",
+                        answer:"Las señales habituales de la presencia de chinches son la presencia de pequeñas manchas de sangre en las sábanas, bolitas fecales, un olor característico como a “enfermo” y, por supuesto, la detección de insectos vivos."
+                        },
+                        {
+                        question:"¿Cuáles son las señales habituales de la presencia de chinches?",
+                        answer:"El nuevo tratamiento térmico Entotherm de Rentokil evita el uso de agentes químicos y acaba con las chinches en todas las fases de su ciclo de vida con una sola aplicación. Cuando este tratamiento no es viable hay que recurrir a métodos químicos o a la combinación de ambos. El tipo de tratamiento elegido dependerá de las características de la zona a tratar y del nivel de infestación."
+                        }
+                    ]
 
 block append content
     +sub-navbar(subMenu)
@@ -40,16 +71,17 @@ block append content
             .row
                 .col-12
                     .text-left.my-5
-                        h2 Chinches de cama
-                        hr.bg-dark.pt-1.w-100
-                        p
-                            | Encontrar chinches en casa o en el hotel donde nos alojamos es uno de nuestros mayores miedos en cuanto a plagas debido a la dificultad que supone eliminarlas, además de lo irritantes que son sus picaduras, llegando a provocar auténtica paranoia a dormir a los que han sufrido una plaga de chinches. Además una plaga de estos insectos también resulta muy irritante debido a su dificultad para realizar un control de la plaga completo, ya que no es posible hacerlo con remedios caseros, como sí es posible con ciertas infestaciones leves de otras plagas. Con las chinches sin embargo hay que realizar un tratamiento de desinsectación completo por parte de profesionales debidamente certificados y que poseen los permisos pertinentes para utilizar los productos necesarios.
+                        h2.solid-red.font-weight-bold.text-uppercase.spacing-3 Chinches de cama
+                        hr.grey.lighten-1.pt-1.w-100.rounded-lg
+                        .text-black-50.px-2
+                            p
+                                | Encontrar chinches en casa o en el hotel donde nos alojamos es uno de nuestros mayores miedos en cuanto a plagas debido a la dificultad que supone eliminarlas, además de lo irritantes que son sus picaduras, llegando a provocar auténtica paranoia a dormir a los que han sufrido una plaga de chinches. Además una plaga de estos insectos también resulta muy irritante debido a su dificultad para realizar un control de la plaga completo, ya que no es posible hacerlo con remedios caseros, como sí es posible con ciertas infestaciones leves de otras plagas. Con las chinches sin embargo hay que realizar un tratamiento de desinsectación completo por parte de profesionales debidamente certificados y que poseen los permisos pertinentes para utilizar los productos necesarios.
 
-                        p
-                            | En los últimos años se ha producido un gran incremento en los casos de chinches encontrados debido al aumento de viajes tanto nacionales como internacionales. De hecho nosotros también hemos notado que el número de tratamientos de chinches realizados a particulares está superando el número de tratamientos realizados a empresas, principalmente establecimientos hoteleros.
-                        
-                        p
-                            | Un dato importante que avala el incremento de infestaciones por chinches, es que actualmente en Rentokil España las chinches son la tercera plaga en importancia según el análisis que realizamos sobre las llamadas recibidas en nuestra compañía. Nuestra dilatada experiencia en el sector, amplio conocimiento sobre plagas y la profesionalidad de todos nuestros trabajadores nos convierten en una apuesta más que fiable para tratar este tipo de plagas. 
+                            p
+                                | En los últimos años se ha producido un gran incremento en los casos de chinches encontrados debido al aumento de viajes tanto nacionales como internacionales. De hecho nosotros también hemos notado que el número de tratamientos de chinches realizados a particulares está superando el número de tratamientos realizados a empresas, principalmente establecimientos hoteleros.
+                            
+                            p
+                                | Un dato importante que avala el incremento de infestaciones por chinches, es que actualmente en Rentokil España las chinches son la tercera plaga en importancia según el análisis que realizamos sobre las llamadas recibidas en nuestra compañía. Nuestra dilatada experiencia en el sector, amplio conocimiento sobre plagas y la profesionalidad de todos nuestros trabajadores nos convierten en una apuesta más que fiable para tratar este tipo de plagas. 
 
     section
         .container
@@ -57,4 +89,30 @@ block append content
                 +card-factory(cards)
 
     +steps
+
+    section
+        .container
+            .row
+                .col-12
+                    .text-left.my-5
+                        h2.solid-red.font-weight-bold.text-uppercase.spacing-3 Control de chinches de cama
+                        hr.grey.lighten-1.pt-1.w-100.rounded-lg
+                        .text-black-50.px-2
+                            p Tanto en su propia casa como en un hotel, las chinches son un huésped no deseado (y aterrador). Las chinches son susceptibles de colonizar cualquier cama,en primer lugar el colchón ya que les gusta permanecer cerca de las fuentes de comida. A medida que la plaga se va extendiendo se refugian en los cabeceros de las camas, las mesillas de noche, la moqueta, e incluso los enchufes.
+
+                            p Debe prestar especial atención cuando pernocte en hoteles, especialmente si viaja con frecuencia y usa diferentes hoteles.
+
+                            p Las claves para evitar que una infestación de chinches se propague a otras habitaciones de su casa o negocio son la detección temprana y la aplicación de tratamientos eficaces, como nuestro chinches Entotherm que usa calor.
+
+                            p Si desea más información sobre el comportamiento de las chinches, descubra nuestra infografía.
+
+                            p Rentokil es la empresa líder en tratamientos para eliminar chinches en España. Nuestros expertos cuentan con amplios conocimientos locales y el respaldo de 85 años de experiencia a escala mundial, lo que asegura que la reputación de su hotel y la salud de su familia estarán en buenas manos.
+
+    section#questions
+        .container
+            .row
+                .col-12.my-3
+                    h2.solid-red.font-weight-bold.text-uppercase.spacing-3 Preguntas frecuentes acerca de las chinches
+                    hr.grey.lighten-1.pt-1.w-100.rounded-lg                    
+                    +collapse-questions(questions)
 

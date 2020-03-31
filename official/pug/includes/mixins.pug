@@ -1,128 +1,138 @@
 mixin sub-navbar(datas)
-    - console.log(datas)
-    - let arrCopy = datas.slice();
-    - let lastElement = arrCopy.pop();
-    section
-        .container
-            .row
-                .col-12.d-flex.justify-content-center.my-3.red.rounded.rounded-lg
-                    each data, i in datas
-                        .text-center.d-flex.align-items-center
-                            a.mb-0.px-2.py-1.p-sm-2.p-md-3.text-white= data
+  - let arrCopy = datas.slice();
+  - let lastElement = arrCopy.pop();
+  section
+    .container
+      .row
+        .col-12.d-flex.justify-content-center.my-3.red.rounded.rounded-lg
+          each data in datas
+            .text-center.d-flex.align-items-center
+              a.mb-0.px-2.py-1.p-sm-2.p-md-3.text-white= data
 
 mixin text-bug(objBug)
-    .container
-        .col-10.mx-auto
-            .d-flex.flex-column.justify-content-center.align-items-center.text-uppercase.text-center.text-white.degrade-red.rounded.rounded-lg.border-red-darken.py-3.position-relative.z-index-4.shadow-top
-                .position-absolute.icon-absolute-bug
-                    i.fas.fa-bug.fa-2x.mb-3.solid-red-darken.circle-white.shadow
-                h1.font-weight-bold.font-35.spacing-5.mt-4= objBug.name
-                hr.border.border-white.rounded.rounded-lg.w-75.mx-auto.shadow-bottom
-                p.font-11.spacing-3.px-4.mb-3= objBug.description
-            .d-flex.justify-content-center.text-upperscase
-                .position-rabsolute.icon-absolute-check.z-index-4
-                    i.fas.fa-check.fa-2x.circle-white-1.solid-red-darken.shadow-inner-top.mb-1
-                .white.rounded.rounded-lg.pt-5.px-5.mt-n5.position-absolute.z-index-3.sub-box-absolute.m-auto
-                    .text-center.mt-5
-                        p.pt-5.mb-3.font-11.font-weight-bold.spacing-2= objBug.textPlus
+  .container
+    .col-10.mx-auto
+      .d-flex.flex-column.justify-content-center.align-items-center.text-uppercase.text-center.text-white.degrade-red.rounded.rounded-lg.border-red-darken.py-3.position-relative.z-index-4.shadow-top
+        .position-absolute.icon-absolute-bug
+          i.fas.fa-bug.fa-2x.mb-3.solid-red-darken.circle-white.shadow
+        h1.font-weight-bold.font-35.spacing-5.mt-4= objBug.name
+        hr.border.border-white.rounded.rounded-lg.w-75.mx-auto.shadow-bottom
+        p.font-11.spacing-3.px-4.mb-3= objBug.description
+      .d-flex.justify-content-center.text-upperscase
+        .position-absolute.icon-absolute-check.z-index-4
+          i.fas.fa-check.fa-2x.circle-white-1.solid-red-darken.shadow-inner-top.mb-1
+        .white.rounded.rounded-lg.pt-5.mt-n5.position-absolute.z-index-3.sub-box-absolute.m-auto
+          .text-center.mt-5
+            p.pt-5.mb-3.font-11.font-weight-bold.spacing-2.text-uppercase= objBug.textPlus
 
 mixin card-factory(cards)
-    each card in cards
-        .col-sm-12.col-md-4.d-flex.align-items-stretch.justify-content-center.my-2.my-sm-3
-            div(class= `img-service-${card.image}`).card.rounded.rounded-lg.w-100
-                .card-body.position-relative.z-index-3
-                    h4.card-title 
-                        a(href= card.link).text-white #{card.title}
-                    hr.pt-1.white.w-100
-                    p.card-text.text-white.mb-5 #{card.description}
-                    .text-center.position-absolute.bottom-10.left-0.right-0
-                        a(href= card.link).btn.btn-outline-white.text-uppercase saber mas
+  each card in cards
+    .col-sm-12.col-md-4.d-flex.align-items-stretch.justify-content-center.my-2.my-sm-3
+      div(class= `img-service-${card.image}`).card.rounded.rounded-lg.w-100
+        .card-body.position-relative.z-index-3
+          h4.card-title 
+            a(href= card.link).text-white #{card.title}
+          hr.pt-1.white.w-100
+          p.card-text.text-white.mb-5 #{card.description}
+          .text-center.position-absolute.bottom-10.left-0.right-0
+            a(href= card.link).btn.btn-outline-white.text-uppercase saber mas
 
 mixin steps
-        <section class="pt-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 col-md-3 p-0 d-flex align-items-streach ">
-                        <div class="info-color w-100">
-                            <div class="text-center text-white p-3">
-                                <i class="fas fa-phone fa-2x mb-3"></i>
-                                <p class="font-weight-bold font-20">Contacto</p>
-                                <hr class="border border-white">
-                                <p>Llámenos y será atendido por nuestra delegación más cercana</p>
-                                <div class="text-left">
-                                    <div class="d-flex align-items-center justify-content-start mt-3">
-                                        <i class="fas fa-check fa-1x mr-2"></i> <span>Técnicos cerca de usted</span>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-start mt-3">
-                                        <i class="fas fa-check fa-1x mr-2"></i> <span>Atención rápida y personalizada</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-3 p-0 d-flex align-items-streach">
-                        <div class="warning-color w-100">
-                            <div class="text-center text-white p-3">
-                                <i class="fas fa-user fa-2x mb-3"></i>
-                                <p class="font-weight-bold font-20">Inspección</p>
-                                <hr class="border border-white">
-                                <p>Evaluaremos su problema de plagas, haremos una inspección si es necesario y le daremos presupuesto y recomendaciones</p>
-                                <div class="text-left">
-                                    <div class="d-flex align-items-center justify-content-start mt-3">
-                                        <i class="fas fa-check fa-1x mr-2"></i> <span>Acordamos la hora de la visita</span>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-start mt-3">
-                                        <i class="fas fa-check fa-1x mr-2"></i> <span>Soluciones a medida para su problema de plagas</span>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-start mt-3">
-                                        <i class="fas fa-check fa-1x mr-2"></i> <span>Técnicos de plantilla y homologados</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-3 p-0 d-flex align-items-streach">
-                        <div class="danger-color w-100">
-                            <div class="text-center text-white p-3">
-                                <i class="fas fa-bug fa-2x mb-3"></i>
-                                <p class="font-weight-bold font-20">Tratamiento</p>
-                                <hr class="border border-white">
-                                <p>Nuestros técnicos homologados aplicarán el tratamiento adecuado</p>
-                                <div class="text-left">
-                                    <div class="d-flex align-items-center justify-content-start mt-3">
-                                        <i class="fas fa-check fa-1x mr-2"></i> <span>Acordamos la hora del tratamiento</span>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-start mt-3">
-                                        <i class="fas fa-check fa-1x mr-2"></i> <span>Responsabilidad medioambiental</span>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-start mt-3">
-                                        <i class="fas fa-check fa-1x mr-2"></i> <span>Tratamiento sin riesgo para mascotas y niños</span>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-start mt-3">
-                                        <i class="fas fa-check fa-1x mr-2"></i> <span>Servicio discreto</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-3 p-0 d-flex align-items-streach">
-                        <div class="success-color w-100">
-                            <div class="text-center text-white p-3">
-                                <i class="fas fa-shield-alt fa-2x mb-3"></i>
-                                <p class="font-weight-bold font-20">Auditoría</p>
-                                <hr class="border border-white">
-                                <p>Acordaremos los servicios necesarios para asegurar que el problema sea resuelto</p>
-                                <div class="text-left">
-                                    <div class="d-flex align-items-center justify-content-start mt-3">
-                                        <i class="fas fa-check fa-1x mr-2"></i> <span>Solución garantizada</span>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-start mt-3">
-                                        <i class="fas fa-check fa-1x mr-2"></i> <span>Recomendaciones de prevención</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+  <section class="pt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-3 d-flex align-items-streach ">
+          <div class="info-color w-100 rounded-lg">
+            <div class="text-center text-white p-3">
+              <i class="fas fa-phone fa-2x mb-3"></i>
+              <p class="font-weight-bold font-20">Contacto</p>
+              <hr class="border border-white rounded-lg">
+              <p class="font-weight-bold my-3">Llámenos y será atendido por nuestra delegación más cercana</p>
+              <div class="text-left">
+                <div class="d-flex align-items-center justify-content-start mt-3">
+                  <i class="fas fa-check fa-1x mr-2"></i> <span>Técnicos cerca de usted</span>
                 </div>
+                <div class="d-flex align-items-center justify-content-start mt-3">
+                  <i class="fas fa-check fa-1x mr-2"></i> <span>Atención rápida y personalizada</span>
+                </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-3 d-flex align-items-streach">
+          <div class="warning-color w-100 rounded-lg">
+            <div class="text-center text-white p-3">
+              <i class="fas fa-user fa-2x mb-3"></i>
+              <p class="font-weight-bold font-20">Inspección</p>
+              <hr class="border border-white rounded-lg">
+              <p class="font-weight-bold my-3">Evaluaremos su problema de plagas, haremos una inspección si es necesario y le daremos presupuesto y recomendaciones</p>
+              <div class="text-left">
+                <div class="d-flex align-items-center justify-content-start mt-3">
+                  <i class="fas fa-check fa-1x mr-2"></i> <span>Acordamos la hora de la visita</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-start mt-3">
+                  <i class="fas fa-check fa-1x mr-2"></i> <span>Soluciones a medida para su problema de plagas</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-start mt-3">
+                  <i class="fas fa-check fa-1x mr-2"></i> <span>Técnicos de plantilla y homologados</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-3 d-flex align-items-streach">
+          <div class="danger-color w-100 rounded-lg">
+            <div class="text-center text-white p-3">
+              <i class="fas fa-bug fa-2x mb-3"></i>
+              <p class="font-weight-bold font-20">Tratamiento</p>
+              <hr class="border border-white rounded-lg">
+              <p class="font-weight-bold my-3">Nuestros técnicos homologados aplicarán el tratamiento adecuado</p>
+              <div class="text-left">
+                <div class="d-flex align-items-center justify-content-start mt-3">
+                  <i class="fas fa-check fa-1x mr-2"></i> <span>Acordamos la hora del tratamiento</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-start mt-3">
+                  <i class="fas fa-check fa-1x mr-2"></i> <span>Responsabilidad medioambiental</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-start mt-3">
+                  <i class="fas fa-check fa-1x mr-2"></i> <span>Tratamiento sin riesgo para mascotas y niños</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-start mt-3">
+                  <i class="fas fa-check fa-1x mr-2"></i> <span>Servicio discreto</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-3 d-flex align-items-streach">
+          <div class="success-color w-100 rounded-lg">
+            <div class="text-center text-white p-3">
+              <i class="fas fa-shield-alt fa-2x mb-3"></i>
+              <p class="font-weight-bold font-20">Auditoría</p>
+              <hr class="border border-white rounded-lg">
+              <p class="font-weight-bold my-3">Acordaremos los servicios necesarios para asegurar que el problema sea resuelto</p>
+              <div class="text-left">
+                <div class="d-flex align-items-center justify-content-start mt-3">
+                  <i class="fas fa-check fa-1x mr-2"></i> <span>Solución garantizada</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-start mt-3">
+                  <i class="fas fa-check fa-1x mr-2"></i> <span>Recomendaciones de prevención</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+mixin collapse-questions(objsCollapses)
+  .text-center
+    each obj, i in objsCollapses
+      a.white-circle.d-block.my-2.p-2.rounded-lg.text-white.position-relative.pb-4.z-index-2(data-toggle="collapse" href=`#frencuentQuestions-${i}` role="button" aria-expanded="false" aria-controls="frencuentQuestions")= obj.question
+        .d-flex-justify-content-center.position-absolute.icon-absolute-plus.z-index-3
+          i.fas.fa-plus.fa-1x.white-circle.p-1.rounded-circle.z-depth-1.position-relative
+      .row
+        .col
+          .collapse.multi-collapse(id=`frencuentQuestions-${i}`)
+            .card.card-body.my-2.position-relative.bottom-20= obj.answer
