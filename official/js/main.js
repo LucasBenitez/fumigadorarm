@@ -16,7 +16,8 @@ questionsSection.addEventListener("click", (e) => {
             //console.log(parent)
         parent.classList.contains('white-circle') ? parent.classList.replace("white-circle", "white-circle-active") : parent.classList.replace("white-circle-active", "white-circle");
         icon.classList.contains('white-circle') ? icon.classList.replace("white-circle", "red") : icon.classList.replace("red", "white-circle");
-        icon.classList.toggle("icon-move");
+        icon.classList.contains('fa-chevron-down') ? icon.classList.replace("fa-chevron-down", "fa-times") : icon.classList.replace("fa-times", "fa-chevron-down");
+
         parent.classList.toggle("z-depth-1");
         // console.log("is i Element")
     } else if (target.nodeName === aElement.nodeName) {
@@ -25,7 +26,8 @@ questionsSection.addEventListener("click", (e) => {
         //console.log(icon)
         parent.classList.contains('white-circle') ? parent.classList.replace("white-circle", "white-circle-active") : parent.classList.replace("white-circle-active", "white-circle");
         icon.classList.contains('white-circle') ? icon.classList.replace("white-circle", "red") : icon.classList.replace("red", "white-circle");
-        icon.classList.toggle("icon-move");
+        icon.classList.contains('fa-chevron-down') ? icon.classList.replace("fa-chevron-down", "fa-times") : icon.classList.replace("fa-times", "fa-chevron-down");
+        //icon.classList.toggle("icon-move");
         parent.classList.toggle("z-depth-1");
         //console.log("is a Element")
     } else if (target.nodeName === divElement.nodeName) {
@@ -34,7 +36,8 @@ questionsSection.addEventListener("click", (e) => {
         //console.log(icon)
         parent.classList.contains('white-circle') ? parent.classList.replace("white-circle", "white-circle-active") : parent.classList.replace("white-circle-active", "white-circle");
         icon.classList.contains('white-circle') ? icon.classList.replace("white-circle", "red") : icon.classList.replace("red", "white-circle");
-        icon.classList.toggle("icon-move");
+        icon.classList.contains('fa-chevron-down') ? icon.classList.replace("fa-chevron-down", "fa-times") : icon.classList.replace("fa-times", "fa-chevron-down");
+        //icon.classList.toggle("icon-move");
         parent.classList.toggle("z-depth-1");
         //console.log("is a Element")
     }

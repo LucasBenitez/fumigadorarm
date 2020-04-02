@@ -1,0 +1,154 @@
+extends ../templates/template.pug
+block append config
+    -subMenu = ["Aves","Ahuyentar aves","Control de aves","Riesgos de enfermedades producidas por las aves", "Especies de aves comunes"]
+    -
+        objBug = {
+            name: "Aves",
+            description: "en casa o en el hotel donde nos alojamos es uno de nuestros mayores miedos en cuanto a plagas debido a la dificultad que supone eliminarlas",
+            textPlus: "Reconocidos en control de aves."
+        }
+    -
+        cards = [
+            {
+                image: "aves-1",
+                title: "Ahuyentar aves",
+                description: "Siga nuestros prácticos consejos para alejar las plagas de aves de su vivienda o negocio",
+                link: "#"
+            },
+            {
+                image: "aves-2",
+                title: "Enfermedades derivadas de la presencia de aves",
+                description: "Las aves son vectores de otra plagas y ademas transmiten enfermedades peligrosas para las personas",
+                link: "#"
+            },
+            {
+                image: "aves-3",
+                title: "Control de plagas de aves",
+                description: "Rentokil ofrece servicios de control de plagas de aves en 5 sencillos pasos",
+                link: "#"
+            }
+        ]
+    
+
+block append content
+    +sub-navbar(subMenu)
+    
+    section.img-service-cucarachas
+        +text-bug(objBug)
+
+    section
+        .container
+            .row
+                .col-12
+                    .text-left.my-5
+                        h2.solid-red.font-weight-bold.text-uppercase.spacing-3 Plagas de aves, ¿cómo identificarlas?
+                        hr.grey.lighten-1.pt-1.w-100.rounded-lg
+                        .text-black-50.px-2
+                            p
+                                | Cualquier tipo de edificio es susceptible de ser colonizado por palomas y gaviotas. Tanto las palomas como las gaviotas han sabido adaptarse al medio ambiente urbano, buscando similitudes entre este y su hábitat natural.p
+                                | Resulta fundamental actuar lo antes posible cuando se descubren indicios de una plaga de cucarachas, y realizar el tratamiento de desinsectación o control de plagas de cucarachas necesario, puesto que estas se reproducen rápidamente. Además de su rápida reproducción, su gran resistencia natural hace necesaria la actuación profesional para conseguir acabar con una plaga de cucarachas, no tanto por la gama de productos profesionales que pueden utilizar sino por el cómo y dónde un técnico experto sabe aplicar los distintos biocidas. 
+                            p
+                                |Éstas son sólo algunas de las pautas que han adoptado en este proceso de adaptación:
+                                ul
+                                li Palomas y gaviotas utilizan azoteas y otras zonas aparentemente inhóspitas de los edificios para anidar. 
+                                li Balcones, cornisas, canalones o chimeneas son las zonas preferidas por estas aves. 
+                                li A las gaviotas, en particular, les gusta agruparse en grandes zonas planas como las azoteas. 
+                                li Cualquier hueco superior a 25 mm puede servir como puerta de entrada a estas plagas. 
+                                li Las palomas prefieren posarse sobre tejados a dos aguas, e incluso pueden romper o mover las tejas para anidar en el interior.
+                                
+                            p
+                                |Cuanto más tiempo se les permita a las aves anidar o posarse en esa zona, más difícil será poder romper esa costumbre. Además las palomas son animales gregarios y una pequeña bandada puede convertirse rápidamente en un grupo de varios centenares de ejemplares.
+    section
+        .container
+            .row
+                .col-12
+                    .text-left.my-5
+                        h2.solid-red.font-weight-bold.text-uppercase.spacing-3 Palomas y Gaviotas, señales de infestación
+                        hr.grey.lighten-1.pt-1.w-100.rounded-lg
+                        .text-black-50.px-2
+                        p
+                            |Reconocer los síntomas de una plaga y adoptar una solución con rapidez puede reducir drásticamente el tiempo necesario (y el dinero) para controlar eficazmente una plaga de palomas y gaviotas.
+                        ul
+                        li Aves posadas continuamente en tejados y cornisas. 
+                        li Nidos de Aves. 
+                        li Mercancias dañadas por picotazos o excrementos. 
+                        li Excrementos concentrados en las zonas de posamiento. 
+                        li Restos de nidos y plumas pueden bloquear canalones y sistemas de drenaje, lo que puede conducir a daños húmedo.
+    section
+        .container
+            .row
+                .col-12
+                    .text-left.my-5
+                        h2.solid-red.font-weight-bold.text-uppercase.spacing-3 ¿Preocupado por una infestación en sus instalaciones?
+                        hr.grey.lighten-1.pt-1.w-100.rounded-lg
+                        .text-black-50.px-2
+                        p
+                            |Si sospecha o tiene la certeza de tener una infestación de palomas o gaviotas, contacte inmediatamente con nuestra unidad especializada en aves.
+                        p
+                            |Nuestro equipo de expertos tiene una gran experiencia en la zona y cuenta con una amplia gama de sistemas no cruentos con las aves para solucionar su problema con palomas o gaviotas. ¡No deje que las plagas de aves dañen su propiedad!
+    section
+        .container
+            .row
+                .col-12
+                    .text-left.my-5
+                        h2.solid-red.font-weight-bold.text-uppercase.spacing-3 Sistemas de control de aves de Rentokil
+                        hr.grey.lighten-1.pt-1.w-100.rounded-lg
+                        .text-black-50.px-2
+                        p
+                            |Las aves pueden convertirse en un problema que implica tomar medidas de control y protección lo más rápidamente posible. La presencia de palomas y gaviotas en su edificio pueden:
+                            ul
+                            li Ser un peligro para la salud, propagando enfermedades como la Ornitosis o bacterias como el E.Colli o la salmonella. 
+                            li Afectar gravemente a edificios y vehículos con sus excrementos. Además con la acumulación de excrementos de palomas y gaviotas sobre superficies aumentan los riesgos de caídas por resbalones. 
+                            li Atascar bajantes, desagües y canalones, atraer a sus nidos a otras plagas, como ácaros, escarabajos o pulgas y que luego estas, se extiendan por otras zonas del edificio. 
+                            li Atacar a clientes y empleados al sentirse las palomas y las gaviotas amenazadas durante la época de cría.
+                            
+    
+    section
+        .container
+            .row
+                +card-factory(cards)
+
+    +steps
+
+    section
+        .container
+            .row
+                .col-12
+                    .text-left.my-5
+                        h2.solid-red.font-weight-bold.text-uppercase.spacing-3 Tratamientos para eliminar cucarachas de Rentokil
+                        hr.grey.lighten-1.pt-1.w-100.rounded-lg
+                        .text-black-50.px-2
+                            p Rentokil posee diversos tratamientos especializados para eliminar cucarachas, la elección de uno u otro dependerá de las características específicas de su hogar o su negocio, y la severidad de la plaga de cucarachas de su casa. Es importante que usted conozca los distintos tipos de cucarachas para saber rápidamente en qué zonas se pueden ocultar.
+                            |
+                            p Nuestros técnicos de servicio poseen una amplia experiencia en todo tipo de tratamientos de desinsectación, desratización, etc., en definitiva todos los tratamientos de control de plagas que realizamos, y además están distribuidos por todo el territorio nacional, para así asegurar un servicio rápido, eficaz y local que le ayude a olvidarse de su problema de cucarachas lo antes posible. Nuestro servicio incluye consejos que le ayudarán a evitar que su problema de cucarachas se vuelva a reproducir.
+                            |
+                            p Rentokil hace uso de las últimas tecnologías y trabaja continuamente en desarrollar nuevos tratamientos más eficaces y rápidos, lo cual es posible gracias al profundo conocimiento de las plaga que poseemos tras más de 30 años de experiencia en España.
+                            |
+    -
+        cards1 = [
+            {
+                image: "aves-4",
+                title: "Mallas antipalomas",
+                description: "Impida el paso de plagas de aves con el sistema de mallas antipalomas",
+                link: "#"
+            },
+            {
+                image: "aves-5",
+                title: "Púas antipalomas",
+                description: "Las púas antipalomas son uno de los métodos más económicos para evitar el posamiento de aves en fachadas",
+                link: "#"
+            },
+            {
+                image: "aves-6",
+                title: "Sistema electroestático",
+                description: "Este sistema es uno de los más eficaces para evitar el posamiento de palomas gracias al uso de impulsos electromagnéticos",
+                link: "#"
+            }
+        ]
+    section
+        .container
+            .row
+                +card-factory(cards1)
+
+    
+

@@ -131,7 +131,7 @@ mixin collapse-questions(objsCollapses)
     each obj, i in objsCollapses
       a.white-circle.d-block.my-2.p-2.rounded-lg.text-white.position-relative.pb-4.z-index-2(data-toggle="collapse" href=`#frencuentQuestions-${i}` role="button" aria-expanded="false" aria-controls="frencuentQuestions")= obj.question
         .d-flex-justify-content-center.position-absolute.icon-absolute-plus.z-index-3
-          i.fas.fa-plus.fa-1x.white-circle.p-1.rounded-circle.z-depth-1.position-relative
+          i.fas.fa-chevron-down.fa-1x.white-circle.p-1.rounded-circle.z-depth-1.position-relative
       .row
         .col
           .collapse.multi-collapse(id=`frencuentQuestions-${i}`)

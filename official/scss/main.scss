@@ -87,10 +87,14 @@ body {
         bottom: -2em;
     }
     &-plus {
-        bottom: 0;
+        bottom: -5px;
         left: 0;
         right: 0;
     }
+}
+
+.red.fa-times {
+    padding: 5px 8px !important;
 }
 
 .sub-box-absolute {

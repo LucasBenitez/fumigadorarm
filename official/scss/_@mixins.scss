@@ -35,3 +35,22 @@
         z-index: 2;
     }
 }
+
+@mixin bigImage-and-cards($bigImg, $cards) {
+    @include big-img-page("../img/bugs/#{$bigImg}", 0.5);
+    @each $i,
+    $img in $cards {
+        &-#{$i} {
+            background: {
+                image: url('../img/bugs/#{$img}');
+                repeat: no-repeat;
+                position: center;
+                size: cover;
+                color: transparent !important;
+            }
+            position: relative;
+            z-index: 1;
+            @include mask();
+        }
+    }
+}

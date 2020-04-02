@@ -67,6 +67,69 @@
   left: 0;
   z-index: 2;
 }
+.img-service-cucarachas-1 {
+  background-image: url("../img/bugs/cucarachas-card.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: transparent !important;
+  position: relative;
+  z-index: 1;
+  color: #fff !important;
+}
+.img-service-cucarachas-1:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.img-service-cucarachas-2 {
+  background-image: url("../img/bugs/cucarachas-card-2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: transparent !important;
+  position: relative;
+  z-index: 1;
+  color: #fff !important;
+}
+.img-service-cucarachas-2:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.img-service-cucarachas-3 {
+  background-image: url("../img/bugs/cucarachas-card-3.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: transparent !important;
+  position: relative;
+  z-index: 1;
+  color: #fff !important;
+}
+.img-service-cucarachas-3:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
 .img-service-chinches {
   background-image: url("../img/bugs/chinche.jpg");
   background-repeat: no-repeat;
@@ -140,6 +203,89 @@
   color: #fff !important;
 }
 .img-service-chinches-3:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.img-service-aves {
+  background-image: url("../img/bugs/aves.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 120px 0 120px 0;
+  position: relative;
+  z-index: 1;
+}
+.img-service-aves:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.img-service-aves-1 {
+  background-image: url("../img/bugs/aves-card.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: transparent !important;
+  position: relative;
+  z-index: 1;
+  color: #fff !important;
+}
+.img-service-aves-1:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.img-service-aves-2 {
+  background-image: url("../img/bugs/aves-card-2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: transparent !important;
+  position: relative;
+  z-index: 1;
+  color: #fff !important;
+}
+.img-service-aves-2:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.img-service-aves-3 {
+  background-image: url("../img/bugs/aves-card-3.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: transparent !important;
+  position: relative;
+  z-index: 1;
+  color: #fff !important;
+}
+.img-service-aves-3:after {
   content: "";
   display: block;
   width: 100%;
@@ -3007,9 +3153,13 @@ body {
   bottom: -2em;
 }
 .icon-absolute-plus {
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   right: 0;
+}
+
+.red.fa-times, .fa-times.red-circle {
+  padding: 5px 8px !important;
 }
 
 .sub-box-absolute {

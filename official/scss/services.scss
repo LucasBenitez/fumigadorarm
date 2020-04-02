@@ -1,44 +1,14 @@
-    .img-service {
-        &-cucarachas {
-            @include big-img-page("../img/bugs/cucaracha.jpg", 0.5)
-        }
-        &-chinches {
-            @include big-img-page("../img/bugs/chinche.jpg", 0.5);
-            &-1 {
-                background: {
-                    image: url('../img/bugs/chinches-card.jpg');
-                    repeat: no-repeat;
-                    position: center;
-                    size: cover;
-                    color: transparent !important;
-                }
-                position: relative;
-                z-index: 1;
-                @include mask();
+        .img-service {
+            &-cucarachas {
+                $cardsCucarachas: (1: "cucarachas-card.jpg", 2: "cucarachas-card-2.jpg", 3: "cucarachas-card-3.jpg");
+                @include bigImage-and-cards("cucaracha.jpg", $cardsCucarachas);
             }
-            &-2 {
-                background: {
-                    image: url('../img/bugs/chinches-card-2.jpg');
-                    repeat: no-repeat;
-                    position: center;
-                    size: cover;
-                    color: transparent !important;
-                }
-                position: relative;
-                z-index: 1;
-                @include mask();
+            &-chinches {
+                $cardsChinches: (1: "chinches-card.jpg", 2: "chinches-card-2.jpg", 3: "chinches-card-3.jpg");
+                @include bigImage-and-cards("chinche.jpg", $cardsChinches);
             }
-            &-3 {
-                background: {
-                    image: url('../img/bugs/chinches-card-3.jpg');
-                    repeat: no-repeat;
-                    position: center;
-                    size: cover;
-                    color: transparent !important;
-                }
-                position: relative;
-                z-index: 1;
-                @include mask();
+            &-aves {
+                $cardsAves: (1: "aves-card.jpg", 2: "aves-card-2.jpg", 3: "aves-card-3.jpg");
+                @include bigImage-and-cards("aves.jpg", $cardsAves);
             }
         }
-    }
