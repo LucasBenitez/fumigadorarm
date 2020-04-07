@@ -1,0 +1,80 @@
+extends ../templates/template.pug
+block append config
+    -subMenu = ["Mosquitos","Identificar los mosquitos","Evitar los mosquitos","Picaduras de mosquitos", "Eliminar mosquitos","Tipos de mosquitos"]
+    -
+        objBug = {
+            name: "Mosquitos",
+            description: "Conociendo sus hábitos y forma de vida es mucho más fácil saber como escapar de ellos",
+            textPlus: "Reconocidos en control de mosquitos."
+        }
+    -
+        cards = [
+            {
+                image: "mosquitos-1",
+                title: "¿Problemas de mosquitos?",
+                description: "Aprenda a identificar una plaga de mosquitos",
+                link: "#"
+            },
+            {
+                image: "mosquitos-2",
+                title: "Como deshacerse de los mosquitos",
+                description: "Consiga consejos profesionales para acabar con los mosquitos",
+                link: "#"
+            },
+            {
+                image: "mosquitos-3",
+                title: "Consejos de prevención",
+                description: "Medidas prácticas y consejos para evitar los mosquitos en su propiedad",
+                link: "#"
+            }
+        ]
+    
+
+block append content
+    +sub-navbar(subMenu)
+    
+    section.img-service-mosquitos
+        +text-bug(objBug)
+
+    section
+        .container
+            .row
+                .col-12
+                    .text-left.my-5
+                        h2.solid-red.font-weight-bold.text-uppercase.spacing-3 Mosquitos
+                        hr.grey.lighten-1.pt-1.w-100.rounded-lg
+                        .text-black-50.px-2
+                            p
+                                |Todos sabemos lo molestos y dolorosos que los mosquitos pueden ser. No importa cuántos ahuyentes o mates, que siempre parece que haya otros mosquitos esperando para picarte. Conociendo sus hábitos y forma de vida es mucho más fácil saber cómo escapar de ellos:
+                                ul
+                                li Pueden desarrollarse de huevos a adultos en un periodo de seis a diez días aproximadamente.
+                                li Se encuentran normalmente cerca del agua, donde se alimentan y desarrollan sus larvas.
+                                li Se sienten atraídos por los colores brillantes.
+                                li Los mosquitos suelen picar al atardecer o al amanecer - o si tienes mala suerte, en ambos. A esas horas es cuando su reloj biológico les dice que es el momento de buscar comida.
+                                
+
+    section
+        .container
+            .row
+                +card-factory(cards)
+
+    +steps 
+
+    section
+        .container 
+            .row
+                +card-factory([{
+                image: "mosquitos-1",
+                title: "¿Problemas de mosquitos?",
+                description: "Aprenda a identificar una plaga de mosquitos",
+                link: "#"
+            }])
+            - let col2 = [{img:"carrousel-mosq-1.jpg"} , {img:"carrousel-mosq-2.jpg"} , {img:"carrousel-mosq-3.jpg"}]
+                .col-sm-12.col-md-4.d-flex.align-items-stretch.justify-content-center.my-2.my-sm-3
+                    +carrousel(col2)
+                +card-factory([{
+                image: "mosquitos-1",
+                title: "¿Problemas de mosquitos?",
+                description: "Aprenda a identificar una plaga de mosquitos",
+                link: "#"
+            }])
