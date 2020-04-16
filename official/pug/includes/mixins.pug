@@ -1,13 +1,53 @@
+mixin navbar
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+        div.container
+            img(src="./img/svg/logoFumigadoraCompletoaMofidicado 2.svg" height="60" alt="")
+            button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation")
+                span.navbar-toggler-icon
+            div.collapse.navbar-collapse.text-uppercase.spacing-2#basicExampleNav
+                ul.navbar-nav.mr-auto
+                    li.nav-item
+                        a.navbar-brand(href="index.html")
+                            a.nav-link(href="#") Inicio
+                    li.nav-item
+                        a.navbar-brand(href="index.html")
+                            a.nav-link(href="#") Nosotros
+                    li.nav-item
+                        a.navbar-brand(href="index.html")
+                            a.nav-link(href="#") Contacto
+                    li.nav-item.dropdown
+                        a.navbar-brand(href="index.html")
+                        a(class="nav-link dropdown-toggle " id="navbarDropdownMenuLink " data-toggle="dropdown " aria-haspopup="true " aria-expanded="false ") Servicios
+                          div(class="dropdown-menu dropdown-primary " aria-labelledby="navbarDropdownMenuLink ")
+                              a.dropdown-item(href="# ") Contacto
+                              a.dropdown-item(href="# ") Control de plagas
+                              a.dropdown-item(href="# ") Nosotros
+                        
 mixin sub-navbar(datas)
-  - let arrCopy = datas.slice();
-  - let lastElement = arrCopy.pop();
-  section
+    - let arrCopy = datas.slice();
+    - let lastElement = arrCopy.pop();
+    -let boton = datas[0]
     .container
-      .row
-        .col-12.d-flex.justify-content-center.my-3.red.rounded.rounded-lg
-          each data in datas
-            .text-center.d-flex.align-items-center
-              a.mb-0.px-2.py-1.p-sm-2.p-md-3.text-white= data
+            .row
+              .col-12.d-flex.justify-content-center.my-3.red.rounded.rounded-lg
+                div.navbar.navbar-expand-lg.navbar-dark.red
+                    div.container
+                          div.boton-i.d-flex.flex-column.justify-content-center.align-items-center  
+                            button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleSubNav" aria-controls="basicExampleSubNav" aria-expanded="false" aria-label="Toggle navigation")= boton
+                              .i.fas.fa-chevron-down.fa-1x.z-depth-1.arrow-sub-navbar  
+                          div.collapse.navbar-collapse.text-uppercase.spacing-2#basicExampleSubNav
+                              
+                              each data,i in datas
+                                if i===0
+                                  boton.hide
+                                else
+                                  ul.navbar-nav
+                                    li.nav-item
+                                        a.navbar-brand(href="index.html")
+                                            a.nav-link(href="#")=data
+                      
+
+
 
 mixin text-bug(objBug)
   .container
