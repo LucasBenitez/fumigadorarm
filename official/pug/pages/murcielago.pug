@@ -1,0 +1,135 @@
+extends ../templates/template.pug
+block append config
+    -subMenu = ["Murciélago","Ambiente y distribución","Hábitos alimenticios","Importancia sanitaria"]
+    -
+        objBug = {
+            name: "Murciélago",
+            description: "Los murciélagos pueden ser portadores del virus de la rabia",
+            textPlus: "Reconocidos en control de murciélagos."
+        }
+    -
+        cards = [
+            {
+                image: "murcielago-1",
+                title: "Eliminar murciélago",
+                description: "Descubra nuestros tratamientos para eliminar murciélagos",
+                link: "#"
+            },
+            {
+                image: "murcielago-2",
+                title: "Murciélagos en casa",
+                description: "Como saber si tenemos una plaga de murciélagos en casa",
+                link: "#"
+            },
+            {
+                image: "murcielago-3",
+                title: "Como prevenir los murciélagos",
+                description: "Consejo para evitar una plaga de murciélagos en casa ",
+                link: "#"
+            }
+        ]
+   
+
+block append content
+    +navbar
+    +sub-navbar(subMenu)
+    
+    section.img-service-cucarachas
+        +text-bug(objBug)
+
+    section
+        .container
+            .row
+                .col-12
+                    .text-left.my-5
+                        h2.solid-red.font-weight-bold.text-uppercase.spacing-3 Murciélagos
+                        hr.grey.lighten-1.pt-1.w-100.rounded-lg
+                        .text-black-50.px-2
+                            p
+                                |Los murciélagos son los únicos mamíferos dotados de alas y adaptados al vuelo activo. Se caracterizan por poseer un de emisión y recepción de ultrasonidos, llamado ecolocalización. Este sistema les permite orientarse y capturar a sus presas.
+                                | Son de hábitos nocturnos o crepusculares. Ocupan diversos tipos de refugios, tanto naturales como artificiales, y la mayoría de las especies forman colonias. Si bien pueden ser portadores del virus de la rabia, los murciélagos aportan un importante beneficio al hombre ya que son los más eficaces predadores de insectos nocturnos.
+
+                            
+    section
+        .container
+            .row
+                +card-factory(cards)
+
+    +steps
+
+    section
+        .container
+            .row
+                .col-12
+                    .text-left.my-5
+                        h2.solid-red.font-weight-bold.text-uppercase.spacing-3 Especies de murciélagos
+                        hr.grey.lighten-1.pt-1.w-100.rounded-lg
+                        .text-black-50.px-2
+                            p
+                            |Especies que pertenecen a la familia Vespetilionidae:
+                            ul
+                            li Murciélago Pardo Chico (Eptesicus diminutus)
+                            li Murciélago Pardo Común (Eptesicus furinalis)
+                            li Murciélago Escarchado Chico (Lasiurus blossevillii)
+                            li Murciélago Escarchado Grande (Lasiurus cinereus)
+                            li Murciélago Leonado (Lasiurus ega)
+                            li Murcielaguito de Vientre Blanco (Myotis albescens)
+                            li Murcielaguito Amarillento (Myotis levis)
+                            p
+                            |Especies que pertenecen a la familia Molossidae:
+                            ul
+                            li Murciélago Moloso Orejas Anchas Pardo (Eumops bonariensis)
+                            li Murciélago Moloso Cola Gruesa Chico (Molossus molossus)
+                            li Murciélago Moloso Común (Tadarida brasiliensis)
+                            
+    section
+        .container
+            .row
+                .col-12
+                    .text-left.my-5
+                        h2.solid-red.font-weight-bold.text-uppercase.spacing-3 Ambiente y distribución
+                        hr.grey.lighten-1.pt-1.w-100.rounded-lg
+                        .text-black-50.px-2
+                            p
+                            |Las 10 especies se pueden encontrar en toda la zona de la región del AMBA, exceptuando al Murciélago Pardo Chico que se encuentra exclusivamente en el Delta del Paraná, y al Murciélago Leonado que solo se encuentra en la zona norte y oeste de la región.
+
+                            p
+                            |Se distribuyen de forma diferente en la Ciudad y la provincia de Buenos Aires debido a las distintas preferencias por el lugar de refugio. Aquellas que prefieren prefieren refugiarse entre las ramas o debajo de la corteza de los árboles, como el Murciélago Escarchado Grande (Lasiurus cinereus), el Escarchado Chico (Lasiurus blossevillii) y el Murciélago Leonado (Lasiurus ega), son más abundantes en la provincia de Buenos Aires, mientras que las que prefieren refugiarse en viviendas y edificios, como el Murciélago Moloso Común (T. brasiliensis), son más abundantes en Capital Federal, constituyéndose una plaga para la población del lugar.
+    section
+        .container
+            .row
+                .col-12
+                    .text-left.my-5
+                        h2.solid-red.font-weight-bold.text-uppercase.spacing-3 Hábitos alimenticios
+                        hr.grey.lighten-1.pt-1.w-100.rounded-lg
+                        .text-black-50.px-2
+                        p
+                        |Las especies presentes en la región del AABA se alimentan exclusivamente de insectos tales como polillas, moscas, escarabajos, grillos, mosquitos, langostas y avispas.
+    section
+        .container
+            .row
+                .col-12
+                    .text-left.my-5
+                        h2.solid-red.font-weight-bold.text-uppercase.spacing-3 Importancia sanitaria 
+                        hr.grey.lighten-1.pt-1.w-100.rounded-lg
+                        .text-black-50.px-2
+                        p
+                        |Todas las especies de murciélagos pueden ser portadoras de rabia e histoplasmosis. En el caso de la rabia el porcentaje de animales infectados en la Ciudad y en la Provincia de Buenos Aires es bajo, del 3% al 4%*. Debido a que estos datos se obtienen a partir de capturas accidentales que se realizan ante las denuncias de los vecinos, es necesario efectuar estudios ecológicos sistematizados a fin de obtener una información más precisa. Los murciélagos no son animales agresivos, la prevención es importante ya que todo murciélago sano o enfermo, si se ve amenazado tratará de defenderse mordiendo. Por lo tanto en caso de encontrar un murciélago, tocarlo por accidente o ser mordido por él, se debe llamar o concurrir inmediatamente al Instituto de Zoonosis más cercano.                   
+    section
+        .container
+            .row
+                .col-12
+                    .text-left.my-5
+                        h2.solid-red.font-weight-bold.text-uppercase.spacing-3 Hábitos 
+                        hr.grey.lighten-1.pt-1.w-100.rounded-lg
+                        .text-black-50.px-2
+                        p
+                        |Los murciélagos guían su vuelo gracias a un sofisticado sistema de ecolocalización. En sus desplazamientos emiten señales –sonidos- que les permiten saber con exactitud donde se encuentran los obstáculos. Éste también sirve para localizar la comida.
+                        p
+                        |Los murciélagos se alimentan de insectos, contrariamente a la creencia popular que los asemeja a los vampiros. Cada ejemplar puede llegar a comer diariamente el equivalente a su peso, unos diez gramos de alimento. Es decir, una colonia de cinco o seis mil ejemplares, como existe en algunos lugares de la península Ibérica, come unos 40 kilos de insectos al día. Esto los vuelve muy beneficiosos para los humanos.
+                        p
+                        |Los murciélagos son el único mamífero totalmente adaptado al medio aéreo, gracias a la transformación de sus miembros anteriores en alas. Eso les confiere una morfología muy especial.
+                        p
+                        |Los murciélagos vuelan de noche y viven en lugares oscuros, principalmente porque necesitan un alto grado de humedad para no deshidratarse. Lo más habitual durante el día es encontrarlos en cavidades.
+                        p
+                        |Actualmente los murciélagos son una especie protegida por la ley.
