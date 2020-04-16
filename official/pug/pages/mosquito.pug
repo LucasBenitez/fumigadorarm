@@ -1,5 +1,6 @@
 extends ../templates/template.pug
 block append config
+
     -subMenu = ["Mosquitos","Identificar los mosquitos","Evitar los mosquitos","Picaduras de mosquitos", "Eliminar mosquitos","Tipos de mosquitos"]
     -
         objBug = {
@@ -31,6 +32,7 @@ block append config
     
 
 block append content
+    +navbar       
     +sub-navbar(subMenu)
     
     section.img-service-mosquitos
