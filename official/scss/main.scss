@@ -7,7 +7,7 @@ body {
     font-family: 'Open Sans' !important;
 }
 
-@for $i from 1 through 100 {
+@for $i from 0 through 100 {
     .spacing-#{$i} {
         letter-spacing: #{$i}px;
     }
@@ -29,10 +29,20 @@ body {
     .right-#{$i} {
         right: #{$i}px;
     }
+    .square-element-#{$i}{
+        width: #{$i}rem !important;
+        height: #{$i}rem !important;
+    }
 }
 
 .flex-1 {
     flex: 1;
+}
+
+.d{
+    &-grid{
+        display: grid !important;
+    }
 }
 
 .bg-image-contact {
@@ -42,6 +52,9 @@ body {
         position: center;
         size: cover;
     }
+    position: relative;
+    @include mask();
+    
 }
 
 .bg-image-background {
@@ -276,4 +289,27 @@ body {
 .icon-move {
     bottom: -5px;
     transform: rotate(45deg);
+}
+
+.arrow-sub-navbar{
+    width: 30px !important;
+    height: 30px !important;
+}
+
+.rounded-xl{
+    border-radius: 0.7rem !important;
+}
+
+.body-grid{
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 86px 1fr 194px;
+}
+
+.content{
+    align-self: center;
+}
+.nosotos-grid{
+    grid-template-columns: 1fr;
+    grid-template-rows: 165px 400px;
 }

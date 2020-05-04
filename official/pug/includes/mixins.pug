@@ -1,69 +1,32 @@
-mixin navbar
-    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
-        div.container
-            img(src="./img/svg/logoFumigadoraCompletoaMofidicado 2.svg" height="60" alt="")
-            button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation")
-                span.navbar-toggler-icon
-            div.collapse.navbar-collapse.text-uppercase.spacing-2#basicExampleNav
-                ul.navbar-nav.mr-auto
-                    li.nav-item
-                        a.navbar-brand(href="index.html")
-                            a.nav-link(href="#") Inicio
-                    li.nav-item
-                        a.navbar-brand(href="index.html")
-                            a.nav-link(href="#") Nosotros
-                    li.nav-item
-                        a.navbar-brand(href="index.html")
-                            a.nav-link(href="#") Contacto
-                    li.nav-item.dropdown
-                        a.navbar-brand(href="index.html")
-                        a(class="nav-link dropdown-toggle " id="navbarDropdownMenuLink " data-toggle="dropdown " aria-haspopup="true " aria-expanded="false ") Servicios
-                          div(class="dropdown-menu dropdown-primary " aria-labelledby="navbarDropdownMenuLink ")
-                              a.dropdown-item(href="# ") Contacto
-                              a.dropdown-item(href="# ") Control de plagas
-                              a.dropdown-item(href="# ") Nosotros
-                        
 mixin sub-navbar(datas)
     - let arrCopy = datas.slice();
     - let lastElement = arrCopy.pop();
-    -let boton = datas[0]
-    .container
-            .row
-              .col-12.d-flex.justify-content-center.my-3.red.rounded.rounded-lg
-                div.navbar.navbar-expand-lg.navbar-dark.red
-                    div.container
-                          div.boton-i.d-flex.flex-column.justify-content-center.align-items-center  
-                            button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleSubNav" aria-controls="basicExampleSubNav" aria-expanded="false" aria-label="Toggle navigation")= boton
-                              .i.fas.fa-chevron-down.fa-1x.z-depth-1.arrow-sub-navbar  
-                          div.collapse.navbar-collapse.text-uppercase.spacing-2#basicExampleSubNav
-                              
-                              each data,i in datas
-                                if i===0
-                                  boton.hide
-                                else
-                                  ul.navbar-nav
-                                    li.nav-item
-                                        a.navbar-brand(href="index.html")
-                                            a.nav-link(href="#")=data
-                      
-
-
+    - let boton = datas[0]
+      .container
+        .row
+          .col-12.d-flex.justify-content-center.my-3.rounded-lg.py-3
+            .navbar.navbar-expand-lg.navbar-dark.bg-dark.rounded-xl.p-0.w-100.p-2
+              button(type="button" data-toggle="collapse" data-target="#basicExampleSubNav" aria-controls="basicExampleSubNav" aria-expanded="false" aria-label="Toggle navigation").navbar-toggler.d-flex.justify-content-center.align-items-center.font-weight-bold.py-2.w-100.d-lg-none.text-uppercase.spacing-2.font-22#btnBug= boton
+                .z-depth-1.arrow-sub-navbar.rounded-circle.red.ml-4.d-flex.align-items-center.justify-content-center
+                  i.fas.fa-chevron-down.fa-xs 
+              
+              .collapse.navbar-collapse.text-uppercase.spacing-2.red.rounded-xl#basicExampleSubNav
+                each data,i in datas
+                  ul.navbar-nav.text-md-center
+                    li.nav-item.ml-2
+                      a.nav-link(href="#")= data
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 mixin text-bug(objBug)
   .container
     .col-10.mx-auto
-      .d-flex.flex-column.justify-content-center.align-items-center.text-uppercase.text-center.text-white.degrade-red.rounded.rounded-lg.border-red-darken.py-3.position-relative.z-index-4.shadow-top
+      .d-flex.flex-column.justify-content-center.align-items-center.text-uppercase.text-center.text-white.degrade-red.rounded-xl.border-red-darken.py-3.position-relative.z-index-4.z-depth-2
         .position-absolute.icon-absolute-bug
           i.fas.fa-bug.fa-2x.mb-3.solid-red-darken.circle-white.shadow
         h1.font-weight-bold.font-35.spacing-5.mt-4= objBug.name
         hr.border.border-white.rounded.rounded-lg.w-75.mx-auto.shadow-bottom
         p.font-11.spacing-3.px-4.mb-3= objBug.description
-      .d-flex.justify-content-center.text-upperscase
-        .position-absolute.icon-absolute-check.z-index-4
-          i.fas.fa-check.fa-2x.circle-white-1.solid-red-darken.shadow-inner-top.mb-1
-        .white.rounded.rounded-lg.pt-5.mt-n5.position-absolute.z-index-3.sub-box-absolute.m-auto
-          .text-center.mt-5
-            p.pt-5.mb-3.font-11.font-weight-bold.spacing-2.text-uppercase= objBug.textPlus
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 mixin card-factory(cards)
   each card in cards
@@ -76,12 +39,13 @@ mixin card-factory(cards)
           p.card-text.text-white.mb-5 #{card.description}
           .text-center.position-absolute.bottom-10.left-0.right-0
             a(href= card.link).btn.btn-outline-white.text-uppercase saber mas
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 mixin steps
   <section class="pt-5">
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 col-md-3 d-flex align-items-streach ">
+        <div class="col-sm-12 col-md-6 col-lg-3 py-3 d-flex align-items-streach ">
           <div class="info-color w-100 rounded-lg">
             <div class="text-center text-white p-3">
               <i class="fas fa-phone fa-2x mb-3"></i>
@@ -99,7 +63,7 @@ mixin steps
             </div>
           </div>
         </div>
-        <div class="col-sm-12 col-md-3 d-flex align-items-streach">
+        <div class="col-sm-12 col-md-6 col-lg-3 py-3 d-flex align-items-streach">
           <div class="warning-color w-100 rounded-lg">
             <div class="text-center text-white p-3">
               <i class="fas fa-user fa-2x mb-3"></i>
@@ -120,7 +84,7 @@ mixin steps
             </div>
           </div>
         </div>
-        <div class="col-sm-12 col-md-3 d-flex align-items-streach">
+        <div class="col-sm-12 col-md-6 col-lg-3 py-3 d-flex align-items-streach">
           <div class="danger-color w-100 rounded-lg">
             <div class="text-center text-white p-3">
               <i class="fas fa-bug fa-2x mb-3"></i>
@@ -144,7 +108,7 @@ mixin steps
             </div>
           </div>
         </div>
-        <div class="col-sm-12 col-md-3 d-flex align-items-streach">
+        <div class="col-sm-12 col-md-6 col-lg-3 py-3 d-flex align-items-streach">
           <div class="success-color w-100 rounded-lg">
             <div class="text-center text-white p-3">
               <i class="fas fa-shield-alt fa-2x mb-3"></i>
@@ -165,6 +129,7 @@ mixin steps
       </div>
     </div>
   </section>
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 mixin collapse-questions(objsCollapses)
   .text-center
@@ -176,6 +141,7 @@ mixin collapse-questions(objsCollapses)
         .col
           .collapse.multi-collapse(id=`frencuentQuestions-${i}`)
             .card.card-body.my-2.position-relative.bottom-20= obj.answer
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 mixin carrousel(objSlides)
   .card.card-body
@@ -200,3 +166,72 @@ mixin carrousel(objSlides)
         <span class="sr-only">Next</span>
       </a>
     </div>
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+mixin labelFactory(nameLabel, idInput, typeInput)
+  .md-form.mb-0
+    input(type="#{typeInput}", name="#{idInput}", id="#{idInput}", placeholder=`${nameLabel}`).form-control.rounded-lg.p-2
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------
+mixin form(bugs, places)
+  <div class="container">
+    <div class="row">
+        .col-md-9.mb-md-0.mb-5.d-flex.align-items-strech
+          .card.card-body.rounded-xl.my-2
+            <h2 class="text-uppercase font-weight-bold text-center my-1 red text-white rounded-xl py-3 spacing-2">Formulario de contacto</h2>
+            form(name="contact-form")#contact-form.my-auto
+              .row
+                .col-md-6
+                  +labelFactory("Nombre", "name", "text")
+                .col-md-6
+                  +labelFactory("Correo Electronico", "email", "email")
+              .row
+                .col-md-6
+                  select#bugSelect.browser-default.custom-select.my-2
+                    option(selected) Seleccione plaga
+                    each bug,i in bugs
+                      option(value=`${i}`)=bug
+                .col-md-6
+                  select#placeSelect.browser-default.custom-select.my-2
+                    option(selected) Seleccione lugar
+                    each place,i in places
+                      option(value=`${i}`)=place
+              .row
+                .col-md-12
+                  .md-form.my-2
+                    textarea(type="text", id="message", name="message", row="2", placeholder="Tu mensaje").form-control.rounded-lg.p-2.mb-0
+              
+              .row
+                .col-md-12
+                  .text-center.mt-3
+                    input(type="submit", value="Enviar consulta").btn.btn-success.rounded-xl
+
+          #response
+
+        .col-md-3.text-center.d-flex.align-items-strech
+          .card.card-body.rounded-xl.my-2
+            ul.list-unstyled.mb-0.my-auto
+              li
+                .card.card-body.square-element-3.d-inline-flex.p-2.align-items-center.bg-primary.rounded-lg.z-depth-1-half
+                  i.fas.fa-map-marker-alt.fa-md.text-white.my-auto
+                p.mt-2.mb-4.font-14 Ramos Mejia, Buenos Aires, Argentina
+              li
+                .card.card-body.square-element-3.d-inline-flex.p-2.align-items-center.bg-success.rounded.lg.z-depth-1-half
+                  i.fas.fa-phone.fa-md.text-white.my-auto
+                .mt-2.mb-4
+                  p.font-14.mb-1 4650-8202
+                  a(target="_blank",href="https://wa.me/5491131039463?text=Hola%2C%20que%20tal%3F%2C%20vengo%20desde%20tu%20web%20y%20necesito%20que%20me%20asesores..").btn.btn-success.rounded-lg.btn-sm #[i.fab.fa-whatsapp.fa-lg.mb-2] #[p.mb-0 Hablenos por Whatsapp]
+              li
+                .card.card-body.square-element-3.d-inline-flex.p-2.align-items-center.bg-info.rounded-lg.z-depth-1-half
+                  i.fas.fa-envelope.fa-md.text-white.my-auto
+                p.mt-2.mb-4.font-14 info@fumigacionesrm.com.ar
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------
+mixin card-bug(bugs)
+  each bug in bugs
+    .col-sm-6.col-md-4.my-3.d-flex.align-items-streach.justify-content-streach
+      a(href=`${bug.htmlView}`).card.text-center.w-100.rounded-xl
+        .card-body
+          .my-3
+            img(src=`./img/svg/${bug.img}`, alt=`${bug.name}`).img-plague
+            hr.w-75.mx-auto.my-4.success-color.pt-1.rounded
+            p.lato.text-uppercase.font-24.mb-1.text-dark.spacing-2 #{bug.name}

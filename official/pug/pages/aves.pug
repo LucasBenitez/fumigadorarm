@@ -1,5 +1,6 @@
 extends ../templates/template.pug
 block append config
+    - titlePage = "Aves "
     -subMenu = ["Aves","Ahuyentar aves","Control de aves","Riesgos de enfermedades producidas por las aves", "Especies de aves comunes"]
     -
         objBug = {
@@ -44,8 +45,7 @@ block append config
 
     
 
-block append content
-    +navbar    
+block append content   
     +sub-navbar(subMenu)
     
     section.img-service-aves

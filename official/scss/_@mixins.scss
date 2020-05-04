@@ -1,6 +1,6 @@
-@mixin big-img-page ($img, $alpha) {
+@mixin big-img-page ($color, $alpha) {
     background: {
-        image: url($img);
+        color: #{$color};
         repeat: no-repeat;
         size: cover;
         position: center;
@@ -13,7 +13,7 @@
         display: block;
         width: 100%;
         height: 100%;
-        background: rgba($color: #000000, $alpha: $alpha);
+        background: rgba($color: white, $alpha: $alpha);
         position: absolute;
         top: 0;
         left: 0;
@@ -37,7 +37,7 @@
 }
 
 @mixin bigImage-and-cards($bigImg, $cards) {
-    @include big-img-page("../img/bugs/#{$bigImg}", 0.5);
+    @include big-img-page(white, 0.5);
     @each $i,
     $img in $cards {
         &-#{$i} {

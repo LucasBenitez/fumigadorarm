@@ -1,0 +1,78 @@
+extends ../templates/template.pug
+block append config
+
+block append content
+    
+
+    section
+        .container
+            .row
+                .col-12
+                    .text-center.mt-5
+                        h1.solid-red.font-weight-bold.text-uppercase.spacing-3.text-center NUESTROS SERVICIOS
+                        hr.grey.lighten-1.pt-1.w-100.rounded-lg.mb-5
+                
+                .col-sm-12.col-md-6.py-2.d-flex.align-items-stretch
+                    .card.card-body.d-grid
+                        h2.text-center.spacing-2.card-title DESINSECTACIÓN
+                        .text-black.px-2.text-center.pt-3
+                            span.font-weight-bold.font-18 El objetivo de este servicio es el control de insectos.
+                            p.my-3 Para tal fin, se realiza una meticulosa inspección del lugar, determinando ingresos, lugares de multiplicación, especies plaga presentes y grado de infestación.
+
+                        .card.card-body.w-75.mx-auto.my-2.rounded-xl.red.text-white
+                            p.font-14.text-center.m-0 Ofrecemos un servicio amplio con personal capacitado y productos de primera calidad para el control de insectos voladores y rastreros.
+                        .text-center
+                            a(href='contacto.html').btn.btn-success.rounded-xl.font-weight-bold Consúltenos ahora
+
+                .col-sm-12.col-md-6.py-2.d-flex.align-items-stretch
+                    .card.card-body.d-grid
+                        h2.text-center.spacing-2.card-title CONTROL DE MOSQUITOS Y PREVENCIÓN DEL DENGUE
+                        p.my-4 Contamos con equipos alemanes de bajo y ultra-bajo volumen para realizar tratamientos especiales para el control de mosquitos en grandes áreas y prevenir así la epidemia de Dengue.
+                        .d-flex.justify-content-center.align-items-center
+                            a(href='contacto.html').btn.btn-info.font-weight-bold.rounded-xl saber mas
+                            a(href='contacto.html').btn.btn-success.font-weight-bold.rounded-xl Consultar ahora
+    section
+        .container  
+            .row
+                .col-sm-12.col-md-6.d-flex.align-items-stretch
+                    .card.card-body.d-grid
+                        h2.text-center.spacing-2.my-3.mb-5 PROGRAMA DE MANEJO INTEGRADO DE PLAGAS
+                        p Es la utilización de todos los recursos necesarios, por medio de procedimientos operativos estandarizados, para minimizar los peligros ocasionados por la presencia de plagas.  
+                        p #[span.font-weight-bold El MIP] es un sistema que permite una importante interrelación con otros sistemas de gestión y constituye un prerrequisito fundamental para la implementación del #[span.font-weight-bold Sistema de Análisis de Peligros] y #[span.font-weight-bold Puntos Críticos de Control].
+                        .card.card-body.red.my-3.rounded-xl
+                            p.text-white Realizamos estrategias personalizadas de manejo integral de plagas que se adaptan a las necesidades de cada cliente, ofreciendo una gran variedad de métodos, desde control biológico hasta químicos.
+                        a(href="contacto.html").btn.btn-info.font-weight-bold.rounded-xl.w-50.mx-auto saber mas
+
+                .col-sm-12.col-md-6.d-flex.align-items-stretch
+                    .card.card-body.d-grid
+                        h2.text-center.spacing-2.my-3.mb-5 CONTROL DE PALOMAS Y MURCIELAGOS
+                        p Visita técnica para el estudio de cada caso sin cargo y sin compromiso.
+                        |Personal capacitado y con seguro para trabajos en altura.#[br ]Palomas, palomas torcazas y gorriones
+                        p Diseñamos técnicas de ahuyentamiento ecológico mediante la instalación de sistemas de redes, pinches o cables de acero; para disuadir su instalación en lugares donde signifique un problema sanitario.
+                        p.font-weight-bold Más de 30 años de experiencia en el control de aves, especialmente palomas y gorriones.
+                        a(href="contacto.html").btn.btn-info.font-weight-bold.rounded-xl.w-50.mx-auto saber mas
+
+    section
+        .container.mt-5
+            .row
+                .col-12.d-flex.align-items-stretch
+                    .card.card-body.d-grid
+                        .red.square-element-5.rounded-circle.p-2.d-flex.justify-content-center.align-items-center.mx-auto.z-depth-2
+                            img(src="./img/bugs/rat.svg", alt="").w-100
+                        h2.text-center.spacing-2.mt-5.text-uppercase Desratizaciones
+                        .card.card-body.red.text-white.rounded-xl.my-3
+                            p.m-0 Inspección del área a tratar prestando especial atención en la detección de lugares de anidación y alimentación como zanjas transitadas por roedores, cabreadas donde se detecten daños, desagües y cloacas, lugares de alimentación, cuevas, madrigueras  y elementos atrayentes.  
+                        ul.list-unstyled.w-75.mx-auto
+                            li.my-2 #[i.fas.fa-check-circle.mr-2]  Aplicación de cebos (bloques parafinados) en aquellos lugares dónde se detecten signos como manchas grasosas, excrementos, pisadas o pelos.
+                                ul.mb-3.ml-3.list-unstyled
+                                    li.my-2 #[i.fas.fa-circle.fa-xs.mr-2] #[span.font-weight-bold En las industrias alimenticias] se trabaja con procedimientos estandarizados, con tres barreras de control, con dispositivos inviolables, numerados, anclados y mapeados, instalados en los laterales de ingresos y a intervalos regulares en los perímetros según la magnitud de la infestación, con controles regulares, llevando estadísticas de consumos, capturas y avistamientos.
+                                    li.my-2 #[i.fas.fa-circle.fa-xs.mr-2] #[span.font-weight-bold En el interior] está prohibido el uso de cebos rodenticidas, se utilizan trampas adhesivas y trampas de golpe no tóxicas
+                            li.my-3 #[i.fas.fa-check-circle.mr-2] Los tratamientos se realizan en cualquier época del año.
+                            li.my-3 #[i.fas.fa-check-circle.mr-2] Se deben mantener puntos de cebado permanente como elemento preventivo.
+
+                        a(href="contacto.html").btn.btn-info.font-weight-bold.rounded-xl.w-50.mx-auto saber mas
+
+    section
+        .container.py-5
+            .row
+                +steps

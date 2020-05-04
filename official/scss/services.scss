@@ -1,14 +1,18 @@
-        .img-service {
-            &-cucarachas {
-                $cardsCucarachas: (1: "cucarachas-card.jpg", 2: "cucarachas-card-2.jpg", 3: "cucarachas-card-3.jpg");
-                @include bigImage-and-cards("cucaracha.jpg", $cardsCucarachas);
-            }
-            &-chinches {
-                $cardsChinches: (1: "chinches-card.jpg", 2: "chinches-card-2.jpg", 3: "chinches-card-3.jpg");
-                @include bigImage-and-cards("chinche.jpg", $cardsChinches);
-            }
-            &-aves {
-                $cardsAves: (1: "aves-card.jpg", 2: "aves-card-2.jpg", 3: "aves-card-3.jpg");
-                @include bigImage-and-cards("aves.jpg", $cardsAves);
-            }
-        }
+.img-service {
+    &-cucarachas {
+        $cardsCucarachas: (1: "cucarachas-card.jpg", 2: "cucarachas-card-2.jpg", 3: "cucarachas-card-3.jpg");
+        @include bigImage-and-cards("cucaracha.jpg", $cardsCucarachas);
+    }
+    &-chinches {
+        $cardsChinches: (1: "chinches-card.jpg", 2: "chinches-card-2.jpg", 3: "chinches-card-3.jpg");
+        @include bigImage-and-cards("chinche.jpg", $cardsChinches);
+    }
+    &-aves {
+        $cardsAves: (1: "aves-card.jpg", 2: "aves-card-2.jpg", 3: "aves-card-3.jpg");
+        @include bigImage-and-cards("aves.jpg", $cardsAves);
+    }
+    &-mosquitos{
+        $cardsMosquitos: (1: "mosquitos-card.jpg", 2: "mosquitos-card-2.jpg", 3: "mosquitos-card-3.jpg");
+        @include bigImage-and-cards("mosquito.jpg", $cardsMosquitos);
+    }
+}
