@@ -1,108 +1,485 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="./img/png/ico.png" type="image/png">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/animated.css">
-    <script src="https://kit.fontawesome.com/d111865932.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./scss/main.css">
-    <title>Sitio en construccion | Fumigaciones Ramos Mejia</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Fumigaciones Ramos Mejia</title>
+<link rel="shortcut icon" href="./img/png/ico.png" type="image/png">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="MDB/css/bootstrap.min.css">
+<link rel="stylesheet" href="MDB/css/mdb.min.css">
+<link rel="stylesheet" href="css/main.css">
 </head>
-
 <body>
-    <header></header>
-    <div class="box-center">
-        <main>
-            <div id="homeContent" class="container ">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="text-center my-5 animated fadeInDown">
-                            <img src="./img/svg/logoFumigadoraCompletoaMofidicado.svg" class="img-fluid" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-
-                        <div class="text-center">
-                            <div class="text-white animated fadeInDown delay-1s">
-                                <h3 class="text-uppercase separed-word">Sitio en construccion</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div id="iconContainer" class="text-center text-white my-3 animated fadeInUp delay-1s">
-                            <div class="">
-                                <a class="text-white" target="_blank" href="https://wa.me/5491131039463?text=Hola%2C%20que%20tal%3F%2C%20vengo%20desde%20tu%20web%20y%20necesito%20que%20me%20asesores..">
-                                    <i id="iconWsp" class="fab fa-whatsapp-square fa-2x mx-3"></i>
-                                </a>
-                                <a href="https://es-la.facebook.com/companiadefumigacionesramosmejia/" target="_blank" class="text-white">
-                                    <i id="iconFace" class="fab fa-facebook-square fa-2x mx-3"></i>
-                                </a>
-
-                                <a href="https://www.instagram.com/companiadefumigaciones/" target="_blank" class="text-white">
-                                    <i class="fab fa-instagram fa-2x mx-3"></i>
-                                </a>
-                                <i id="iconContact" class="fas fa-envelope-square fa-2x mx-3"></i>
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="formContainer" class="container animated fadeInUp d-none">
-                <div class="row p-0">
-                    <div class="col-7 mx-auto">
-                        <form id="formContact" action="form.php" method="POST">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5 class="text-center text-uppercase font-weight-bold">Envianos tu mensaje</h5>
-                                </div>
-                                <div class="card-body">
-                                    <div class="form-group ">
-                                        <label for="name " class="text-uppercase font-small ">Nombre completo</label>
-                                        <input type="text " name="nombre " class="form-control " placeholder="Nombre completo ">
-                                    </div>
-                                    <div class="form-group ">
-                                        <label for="email " class="text-uppercase font-small ">Correo Electronico</label>
-                                        <input type="email " name="email " id="email " class="form-control " placeholder="Correo Electronico ">
-                                    </div>
-                                    <div class="form-group ">
-                                        <label for="telephone " class="text-uppercase font-small ">Numero de telefonico</label>
-                                        <input type="number " name="telephone " id="telephone " class="form-control " placeholder="Numero telefonico ">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="message" class="text-uppercase font-small">Mensaje</label>
-                                        <textarea name="message" id="message" class="form-control" placeholder="Mensaje"></textarea>
-                                    </div>
-                                </div>
-                                <div class="card-footer d-flex justify-content-between">
-                                    <a id="homeButton" role="button" class="btn btn-primary rounded-pill"><i class="fas fa-home text-white"></i></a>
-                                    <button type="submit" class="btn btn-success text-white text-uppercase font-small">Enviar</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-
-                </div>
-            </div>
-        </main>
-    </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
-    <script src="./js/main.js "></script>
+<header>
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+<!-- Navbar brand -->
+<a class="navbar-brand" href="index.html">
+<img src="./img/svg/logoFumigadoraCompletoaMofidicado 2.svg" height="60" alt="">
+</a>
+<!-- Collapse button -->
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!-- Collapsible content -->
+<div class="collapse navbar-collapse text-uppercase spacing-2" id="basicExampleNav">
+<!-- Links -->
+<ul class="navbar-nav mr-auto">
+<li class=" nav-item ">
+<a class="nav-link " href="# ">Inicio</a>
+</li>
+<li class="nav-item ">
+<a class="nav-link " href="# ">Nosotros</a>
+</li>
+<li class="nav-item ">
+<a class="nav-link " href="# ">Contacto</a>
+</li>
+<!-- Dropdown -->
+<li class="nav-item dropdown ">
+<a class="nav-link dropdown-toggle " id="navbarDropdownMenuLink " data-toggle="dropdown " aria-haspopup="true " aria-expanded="false ">Servicios</a>
+<div class="dropdown-menu dropdown-primary " aria-labelledby="navbarDropdownMenuLink ">
+<a class="dropdown-item " href="# ">Contacto</a>
+<a class="dropdown-item " href="# ">Control de plagas</a>
+<a class="dropdown-item " href="# ">Nosotros</a>
+</div>
+</li>
+</ul>
+<!-- Links -->
+</div>
+<!-- Collapsible content -->
+</div>
+</nav>
+<!--/.Navbar-->
+</header>
+<main>
+<section class=" position-relative bg-image-background py-5">
+<div class="container position-relative z-index-3">
+<div class="row ">
+<div class="col-sm-12 ">
+<div class="text-center text-white my-3">
+<h1 class="text-uppercase lato spacing-2 font-weight-bold my-3">Somos expertos en control de plagas</h1>
+<a href="contacto.html" class="btn btn-success">saber mas</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-success">
+<div class="container">
+<div class="row">
+<div class="col-12 ">
+<div class="text-center text-white py-3">
+<p class="my-2">Pida una inspeccion al <a href="#">Whatsapp</a> o por <a href="#">Contacto</a></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="grey lighten-2">
+<div class="container py-3">
+<div class="row">
+<div class="col-sm-12 col-md-4 my-2">
+<div class="d-flex justify-content-center align-items-center">
+<i class="fas fa-check fa-2x text-black-50 mr-3"></i>
+<p class="mb-0 text-black-50">Servicios realizados por técnicos homologados de plantilla</p>
+</div>
+</div>
+<div class="col-sm-12 col-md-4 my-2">
+<div class="d-flex justify-content-center align-items-center">
+<i class="fas fa-star fa-2x text-black-50 mr-3"></i>
+<p class="mb-0 text-black-50">Damos servicio a más de 30.000 clientes en España desde 1981</p>
+</div>
+</div>
+<div class="col-sm-12 col-md-4 my-2">
+<div class="d-flex justify-content-center align-items-center">
+<i class="fas fa-shield-alt fa-2x text-black-50 mr-3"></i>
+<p class="mb-0 text-black-50">Estamos certificados en ISO 9001 y 14001; OHSAS 18001, CEPA y Tecnalia</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="container">
+<div class="row">
+<div class="col-sm-12 col-md-7 mx-auto">
+<div class="text-center py-5">
+<h2> Estoy buscando una solución para eliminar mi problema de
+<select class=" custom-select custom-select-sm w-50">
+<option selected>Cucarachas</option>
+<option value="1">Murcielagos</option>
+<option value="2">Palomas</option>
+<option value="3">Termitas</option>
+</select> en mi <select class=" custom-select custom-select-sm w-50">
+<option selected>Domicilio</option>
+<option value="1">Empresa</option>
+</select> lo antes posible.</h2>
+<a href="" class="btn btn-success my-3">Consultar ahora</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!--Section plagas-->
+<section class="grey">
+<div class="container py-2">
+<div class="row">
+<div class="col-sm-6 col-md-4 my-3  d-flex align-items-streach justify-content-streach ">
+<a href="#" class="card text-center w-100">
+<div class="card-body">
+<div class="my-3">
+<img src="./img/svg/cockroach.svg" alt="Cucarachas" class="img-plague">
+<hr class="w-75 mx-auto my-4 success-color pt-1 rounded ">
+<p class="lato text-uppercase font-24  mb-1 text-dark spacing-2">Cucarachas</p>
+</div>
+</div>
+</a>
+</div>
+<div class="col-sm-6 col-md-4 my-3 d-flex align-items-streach justify-content-streach ">
+<a href="#" class="card text-center w-100">
+<div class="card-body">
+<div class="my-3">
+<img src="./img/svg/wasp.svg" alt="Avispas" class="img-plague">
+<hr class="w-75 mx-auto my-4 success-color pt-1 rounded ">
+<p class="lato text-uppercase font-24 m-0 text-dark spacing-2">Avispas</p>
+</div>
+</div>
+</a>
+</div>
+<div class="col-sm-6 col-md-4 my-3 d-flex align-items-streach  justify-content-center">
+<a href="#" class="card text-center w-100">
+<div class="card-body">
+<div class="my-3">
+<img src="./img/svg/ant.svg" alt="Hormigas" class="img-plague">
+<hr class="w-75 mx-auto my-4 success-color pt-1 rounded ">
+<p class="lato text-uppercase font-24 m-0 text-dark spacing-2">Hormigas</p>
+</div>
+</div>
+</a>
+</div>
+<div class="col-sm-6 col-md-4 my-3 d-flex align-items-streach justify-content-streach">
+<a href="#" class="card text-center w-100">
+<div class="card-body">
+<div class="my-3">
+<img src="./img/svg/beetle.svg" alt="Escarabajos" class="img-plague">
+<hr class="w-75 mx-auto my-4 success-color pt-1 rounded ">
+<p class="lato text-uppercase font-24 m-0 text-dark spacing-2">Escarabajos</p>
+</div>
+</div>
+</a>
+</div>
+<div class="col-sm-6 col-md-4 my-3 d-flex align-items-streach justify-content-streach ">
+<a href="#" class="card text-center w-100">
+<div class="card-body ">
+<div class="my-3">
+<img src="./img/svg/mosquito.svg" alt="Mosquitos" class="img-plague">
+<hr class="w-75 mx-auto my-4 success-color pt-1 rounded ">
+<p class="lato text-uppercase font-24 m-0 text-dark spacing-2">Mosquitos</p>
+</div>
+</div>
+</a>
+</div>
+<div class="col-sm-6 col-md-4 my-3 d-flex align-items-streach justify-content-streach">
+<a href="#" class="card text-center w-100">
+<div class="card-body">
+<div class="my-3">
+<img src="./img/svg/mite.svg" alt="Acaros" class="img-plague">
+<hr class="w-75 mx-auto my-4 success-color pt-1 rounded ">
+<p class="lato text-uppercase font-24 m-0 text-dark spacing-2">Acaros</p>
+</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- <section class="grey">
+<div class="container py-3">
+<div class="row">
+<div class="col-6 col-sm-6 col-md-3 my-3">
+<div class="card text-center">
+<div class="card-body">
+<i class="fas fa-bug fa-2x"></i>
+<div class="w-75 mx-auto border-bottom my-3"></div>
+<p class="lato text-uppercase">Control de plagas urbanas</p>
+</div>
+</div>
+</div>
+<div class="col-6 col-sm-6 col-md-3 my-3">
+<div class="card text-center">
+<div class="card-body">
+<i class="fas fa-tree fa-2x"></i>
+<div class="w-75 mx-auto border-bottom my-3"></div>
+<p class="lato text-uppercase">Tratamiento de espacios verdes </p>
+</div>
+</div>
+</div>
+<div class="col-6 col-sm-6 col-md-3 my-3">
+<div class="card text-center">
+<div class="card-body">
+<i class="fas fa-bug fa-2x"></i>
+<div class="w-75 mx-auto border-bottom my-3"></div>
+<p class="lato text-uppercase">Control de plagas urbanas</p>
+</div>
+</div>
+</div>
+<div class="col-6 col-sm-6 col-md-3 my-3">
+<div class="card text-center">
+<div class="card-body">
+<i class="fas fa-crow fa-2x"></i>
+<div class="w-75 mx-auto border-bottom my-3"></div>
+<p class="lato text-uppercase">Control de pajaros y murcielagos </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section> -->
+<section class="">
+<div class="container">
+<div class="row">
+<div class="col-sm-12 col-md-4 mt-5">
+<!-- Card -->
+<div class="card">
+<!-- Card image -->
+<img class="card-img-top" src="./img/tmb-fumigadon-con-clienta.jpg" alt="Card image cap">
+<!-- Card content -->col-sm-12 col-md-3
+<div class="card-body">
+<!-- Title -->
+<h4 class="card-title"><a>Acerca de Fumigaciones Ramos Mejia</a></h4>
+<!-- Text -->
+<p class="card-text">Descubra más información sobre quiénes somos y cómo podemos ayudarle con sus problemas de plagas</p>
+</div>
+<a href="" class="btn btn-success btn-sm w-50 mx-auto mb-4">Saber mas</a>
+</div>
+<!-- Card -->
+</div>
+<div class="col-sm-12 col-md-8 mt-5">
+<div class="card  mx-3">
+<div class="container">
+<!--Section heading-->
+<h2 class="h1-responsive font-weight-bold text-center my-4">Contacto</h2>
+<div class="row">
+<!--Grid column-->
+<div class="col-md-9 mb-md-0 mb-5">
+<form id="contact-form" name="contact-form" action="mail.php" method="POST">
+<!--Grid row-->
+<div class="row">
+<!--Grid column-->
+<div class="col-md-6">
+<div class="md-form mb-0">
+<input type="text" id="name" name="name" class="form-control">
+<label for="name" class="">Nombre</label>
+</div>
+</div>
+<!--Grid column-->
+<!--Grid column-->
+<div class="col-md-6">
+<div class="md-form mb-0">
+<input type="text" id="email" name="email" class="form-control">
+<label for="email" class="">Correo Electronico</label>
+</div>
+</div>
+<!--Grid column-->
+</div>
+<!--Grid row-->
+<!--Grid row-->
+<div class="row">
+<div class="col-md-12">
+<div class="md-form mb-0">
+<input type="text" id="subject" name="subject" class="form-control">
+<label for="subject" class="">Asunto</label>
+</div>
+</div>
+</div>
+<!--Grid row-->
+<!--Grid row-->
+<div class="row">
+<!--Grid column-->
+<div class="col-md-12">
+<div class="md-form">
+<textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+<label for="message">Tu mensaje</label>
+</div>
+</div>
+</div>
+<!--Grid row-->
+</form>
+<div class="text-center text-md-left">
+<a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Enviar</a>
+</div>
+<div class="status"></div>
+</div>
+<!--Grid column-->
+<!--Grid column-->
+<div class="col-md-3 text-center">
+<ul class="list-unstyled mb-0">
+<li><i class="fas fa-map-marker-alt fa-2x"></i>
+<p>Ramos Mejia</p>
+</li>
+<li><i class="fas fa-phone mt-4 fa-2x"></i>
+<p>+ 01 234 567 89</p>
+</li>
+<li><i class="fas fa-envelope mt-4 fa-2x"></i>
+<p>info@fumigacionesrm.com.ar</p>
+</li>
+</ul>
+</div>
+<!--Grid column-->
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!--Section: Contact v.2-->
+<section class="pt-5">
+<div class="container">
+<div class="row">
+<div class="col-sm-12 col-md-3 p-0 d-flex align-items-streach">
+<div class="info-color">
+<div class="text-center text-white p-3">
+<i class="fas fa-phone-alt fa-2x mb-3"></i>
+<p class="font-weight-bold font-20">Contacto</p>
+<hr class="border border-white">
+<p>Llámenos y será atendido por nuestra delegación más cercana</p>
+<div class="text-left">
+<div class="d-flex align-items-center justify-content-start mt-3">
+<i class="fas fa-check fa-1x mr-2"></i> <span>Técnicos cerca de usted</span>
+</div>
+<div class="d-flex align-items-center justify-content-start mt-3">
+<i class="fas fa-check fa-1x mr-2"></i> <span>Atención rápida y personalizada</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-12 col-md-3 p-0 d-flex align-items-streach">
+<div class="warning-color">
+<div class="text-center text-white p-3">
+<i class="fas fa-user fa-2x mb-3"></i>
+<p class="font-weight-bold font-20">Inspección</p>
+<hr class="border border-white">
+<p>Evaluaremos su problema de plagas, haremos una inspección si es necesario y le daremos presupuesto y recomendaciones</p>
+<div class="text-left">
+<div class="d-flex align-items-center justify-content-start mt-3">
+<i class="fas fa-check fa-1x mr-2"></i> <span>Acordamos la hora de la visita</span>
+</div>
+<div class="d-flex align-items-center justify-content-start mt-3">
+<i class="fas fa-check fa-1x mr-2"></i> <span>Soluciones a medida para su problema de plagas</span>
+</div>
+<div class="d-flex align-items-center justify-content-start mt-3">
+<i class="fas fa-check fa-1x mr-2"></i> <span>Técnicos de plantilla y homologados</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-12 col-md-3 p-0 d-flex align-items-streach">
+<div class="danger-color">
+<div class="text-center text-white p-3">
+<i class="fas fa-bug fa-2x mb-3"></i>
+<p class="font-weight-bold font-20">Tratamiento</p>
+<hr class="border border-white">
+<p>Nuestros técnicos homologados aplicarán el tratamiento adecuado</p>
+<div class="text-left">
+<div class="d-flex align-items-center justify-content-start mt-3">
+<i class="fas fa-check fa-1x mr-2"></i> <span>Acordamos la hora del tratamiento</span>
+</div>
+<div class="d-flex align-items-center justify-content-start mt-3">
+<i class="fas fa-check fa-1x mr-2"></i> <span>Responsabilidad medioambiental</span>
+</div>
+<div class="d-flex align-items-center justify-content-start mt-3">
+<i class="fas fa-check fa-1x mr-2"></i> <span>Tratamiento sin riesgo para mascotas y niños</span>
+</div>
+<div class="d-flex align-items-center justify-content-start mt-3">
+<i class="fas fa-check fa-1x mr-2"></i> <span>Servicio discreto</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-12 col-md-3 p-0 d-flex align-items-streach">
+<div class="success-color">
+<div class="text-center text-white p-3">
+<i class="fas fa-shield-alt fa-2x mb-3"></i>
+<p class="font-weight-bold font-20">Auditoría</p>
+<hr class="border border-white">
+<p>Acordaremos los servicios necesarios para asegurar que el problema sea resuelto</p>
+<div class="text-left">
+<div class="d-flex align-items-center justify-content-start mt-3">
+<i class="fas fa-check fa-1x mr-2"></i> <span>Solución garantizada</span>
+</div>
+<div class="d-flex align-items-center justify-content-start mt-3">
+<i class="fas fa-check fa-1x mr-2"></i> <span>Recomendaciones de prevención</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!--Section: Contact v.2-->
+<section class="bg-image-contact py-4">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<div class="text-center text-white">
+<h3 class="font-weight-bold">CONTAMOS CON MAS DE 40 AÑOS EN EL MERCADO HACIENDO LO QUE MEJOR SABEMOS HACER, ELIMINAR PLAGAS</h3>
+<a href="#" class="btn btn-success">Contactar ahora</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="page-footer font-small cyan darken-3">
+<!-- Footer Elements -->
+<div class="container">
+<!-- Grid row-->
+<div class="row">
+<!-- Grid column -->
+<div class="col-md-12 py-3">
+<div class="mb-5 flex-center">
+<div id="iconContainer" class="text-center text-white my-3 animated fadeInUp delay-1s">
+<div class="">
+<a class="text-white" target="_blank" href="https://wa.me/5491131039463?es razonable lo que dtext=Hola%2C%20que%20tal%3F%2C%20vengo%20desde%20tu%20web%20y%20necesito%20que%20me%20asesores..">
+<i id="iconWsp" class="fab fa-whatsapp-square fa-2x mx-3"></i>
+</a>
+<a href="https://es-la.facebook.com/companiadefumigacionesramosmejia/" target="_blank" class="text-white">
+<i id="iconFace" class="fab fa-facebook-square fa-2x mx-3"></i>
+</a>
+<a href="https://www.instagram.com/companiadefumigaciones/" target="_blank" class="text-white">
+<i class="fab fa-instagram fa-2x mx-3"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Grid column -->
+</div>
+<!-- Grid row-->
+</div>
+<!-- Footer Elements -->
+<!-- Copyright -->
+<div class="footer-copyright text-center py-3">© 2020 Copyright:
+<a href="https://fumigacionesrm.com.ar"> fumigacionesrm.com.ar</a>
+</div>
+<!-- Copyright -->
+</footer>
+<!-- Footer -->
+<script src="MDB/js/jquery.min.js "></script>
+<script src="MDB/js/popper.min.js "></script>
+<script src="MDB/js/bootstrap.min.js "></script>
+<script src="MDB/js/mdb.min.js "></script>
+<script src="js/main.js "></script>
 </body>
-
 </html>

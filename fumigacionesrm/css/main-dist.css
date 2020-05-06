@@ -1,0 +1,44 @@
+body {
+  font-family: 'Open Sans';
+  background: linear-gradient(143deg, #e6a3a3, #73d576, #e6a3a3, #73d576);
+  background-size: 1200% 1200%;
+  -webkit-animation: gradientBackground 25s ease infinite;
+  -moz-animation: gradientBackground 25s ease infinite;
+  -o-animation: gradientBackground 25s ease infinite;
+  animation: gradientBackground 25s ease infinite; }
+
+.box-oriented {
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+@-webkit-keyframes gradientBackground {
+  0% {
+    background-position: 0% 15%; }
+  50% {
+    background-position: 100% 86%; }
+  100% {
+    background-position: 0% 15%; } }
+@-moz-keyframes gradientBackground {
+  0% {
+    background-position: 0% 15%; }
+  50% {
+    background-position: 100% 86%; }
+  100% {
+    background-position: 0% 15%; } }
+@-o-keyframes gradientBackground {
+  0% {
+    background-position: 0% 15%; }
+  50% {
+    background-position: 100% 86%; }
+  100% {
+    background-position: 0% 15%; } }
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 15%; }
+  50% {
+    background-position: 100% 86%; }
+  100% {
+    background-position: 0% 15%; } }
+
+/*# sourceMappingURL=main-dist.css.map */
