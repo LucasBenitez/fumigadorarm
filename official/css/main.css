@@ -6,6 +6,9 @@
 .degrade-red {
   background: linear-gradient(0turn, #d53043 30%, #d63447 70%);
 }
+.degrade-black {
+  background: linear-gradient(80deg, #393939 0%, #737373 39%, #494949 100%);
+}
 
 .solid-red {
   color: #d63447;
@@ -3868,6 +3871,18 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  color: #fff !important;
+}
+.bg-image-contact:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
 .bg-image-background {
@@ -3876,17 +3891,18 @@ body {
   background-size: cover;
   background-position: center;
   height: 100%;
+  color: #fff !important;
 }
-.bg-image-background::after {
+.bg-image-background:after {
   content: "";
   display: block;
-  background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
   height: 100%;
+  background: rgba(0, 0, 0, 0.7);
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 .img-layout-abs {
@@ -3961,7 +3977,7 @@ body {
 .body-grid {
   height: 100vh;
   grid-template-columns: 1fr;
-  grid-template-rows: 86px 1fr 194px;
+  grid-template-rows: repeat(3, 1fr);
 }
 
 .content {

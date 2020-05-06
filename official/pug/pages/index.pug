@@ -3,11 +3,11 @@ block append config
     - titlePage = "Inicio "
     - 
         let arrBug = [
-            {name: "Cucarachas", htmlView: 'cucarachas.html', img: 'cockroach.svg'},
-            {name: "Mosquitos", htmlView: 'mosquito.html', img: 'mosquito.svg'},
-            {name: "Palomas", htmlView: 'aves.html', img: 'paloma.svg'},
-            {name: "Murcielagos", htmlView: 'murcielago.html', img: 'bat.svg'},
-            {name: "Ratones", htmlView: 'raton.html', img: 'rat.svg'},
+            {name: "CONTROL DE MOSQUITOS Y PREVENCIÓN DEL DENGUE", htmlView: 'mosquito.html', img: 'mosquito.svg'},
+            {name: "PROGRAMA DE MANEJO INTEGRADO DE PLAGAS", htmlView: 'aves.html', img: 'paloma.svg'},
+            {name: "CONTROL DE PALOMAS Y MURCIELAGOS", htmlView: 'murcielago.html', img: 'bat.svg'},
+            {name: "DESINSECTACIÓN", htmlView: 'cucarachas.html', img: 'cockroach.svg'},
+            {name: "Desratizaciones", htmlView: 'raton.html', img: 'rat.svg'},
             ]
 
 block append content
@@ -18,14 +18,14 @@ block append content
                 .col-sm-12
                     .text-center.text-white.my-3
                         h1.text-uppercase.lato.spacing-2.font-weight-bold.my-3 Somos expertos en control de plagas
-                        a(href="contacto.html").btn.btn-success saber mas
+                        a(href="contacto.html").btn.btn-danger.rounded-xl saber mas
 
-    section.bg-success
+    section.bg-dark
         .container
             .row
                 .col-12
                     .text-center.text-white.py-3
-                        p.my-2 Pida una inspeccion al #[a(href="#").btn.btn-info.btn-sm.font-weight-bold.spacing-1.rounded-lg #[i.fab.fa-whatsapp ] Whatsapp] o dejanos un #[a(href="contacto.html").btn.btn-info.btn-sm.font-weight-bold.spacing-1.rounded-lg #[i.far.fa-envelope ] Mensaje]
+                        p.my-2 Pida una inspeccion al #[a(href="#").btn.btn-danger.btn-sm.font-weight-bold.spacing-1.rounded-lg #[i.fab.fa-whatsapp ] Whatsapp] o dejanos un #[a(href="contacto.html").btn.btn-danger.btn-sm.font-weight-bold.spacing-1.rounded-lg #[i.far.fa-envelope ] Mensaje]
 
     
     section.grey.lighten-2
@@ -46,16 +46,16 @@ block append content
                 .col-sm-12.col-md-7.mx-auto
                     .text-center.py-5
                         h2 Estoy buscando una solución para eliminar mi problema de 
-                            select.custom-select.custom-select-sm.w-50 
+                            select.custom-select.custom-select-sm.text-center.w-25
                                 each bug,i in bugs
-                                    option(value="#{i}")= bug
+                                    option(value=`${i}`).font-24= bug
                             |  en mi
-                            select.custom-select.custom-select-sm.w-50 
+                            select.custom-select.custom-select-sm.text-center.w-25
                                 each place,i in places
-                                    option(value="#{i}")= place
+                                    option(value=`${i}`).font-24= place
                             |  lo antes posible.
-                        a(href="contacto.html").btn.btn-success.my-3 Consultar ahora
-    section.aqua-gradient
+                        a(href="contacto.html").btn.btn-danger.rounded-xl.my-3 Consultar ahora
+    section.degrade-black
         .container.py-2
             .row
                 +card-bug(arrBug)
@@ -65,5 +65,5 @@ block append content
             .row
                 .col-12
                     .text-center.text-white
-                        h3.font-weight-bold CONTAMOS CON MAS DE 40 AÑOS EN EL MERCADO HACIENDO LO QUE MEJOR SABEMOS HACER, ELIMINAR PLAGAS
-                        a(href="contacto.html").btn.btn-success Contactar ahora
+                        h3.font-weight-bold.mb-4 CONTAMOS CON MAS DE 40 AÑOS EN EL MERCADO HACIENDO LO QUE MEJOR SABEMOS HACER, ELIMINAR PLAGAS
+                        a(href="contacto.html").btn.btn-danger.rounded-xl Contactar ahora

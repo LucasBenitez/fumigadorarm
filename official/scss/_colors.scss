@@ -2,6 +2,9 @@
     &-red {
         background: linear-gradient(0turn, darken($red, 1) 30%, $red 70%);
     }
+    &-black{
+        background: linear-gradient(80deg, rgba(57,57,57,1) 0%, rgba(115,115,115,1) 39%, rgba(73,73,73,1) 100%);
+    }
 }
 
 .solid {
