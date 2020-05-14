@@ -29,7 +29,7 @@ body {
     .right-#{$i} {
         right: #{$i}px;
     }
-    .square-element-#{$i}{
+    .square-element-#{$i} {
         width: #{$i}rem !important;
         height: #{$i}rem !important;
     }
@@ -39,8 +39,8 @@ body {
     flex: 1;
 }
 
-.d{
-    &-grid{
+.d {
+    &-grid {
         display: grid !important;
     }
 }
@@ -54,7 +54,6 @@ body {
     }
     position: relative;
     @include mask();
-    
 }
 
 .bg-image-background {
@@ -204,7 +203,8 @@ body {
         position: center;
         size: cover;
     }
-   @include mask(#000, 0.9);
+    @include mask(#000,
+    0.9);
 }
 
 .bg-image-background {
@@ -282,25 +282,114 @@ body {
     transform: rotate(45deg);
 }
 
-.arrow-sub-navbar{
+.arrow-sub-navbar {
     width: 30px !important;
     height: 30px !important;
 }
 
-.rounded-xl{
+.rounded-xl {
     border-radius: 0.7rem !important;
+    &-top {
+        border-top-left-radius: 0.7rem !important;
+        border-top-right-radius: 0.7rem !important;
+    }
 }
 
-.body-grid{
+.body-grid {
     height: 100vh;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
 }
 
-.content{
+.content {
     align-self: center;
 }
-.nosotos-grid{
+
+.nosotos-grid {
     grid-template-columns: 1fr;
     grid-template-rows: 165px 400px;
+}
+
+.navbar.navbar-dark {
+    .navbar-nav {
+        .nav-item.active>.nav-link {
+            background-color: unset;
+            &:after {
+                content: "";
+                display: block;
+                width: 100%;
+                background-color: white;
+                height: 3px;
+                margin-top: 5px;
+                border-radius: 0.7rem;
+            }
+        }
+    }
+}
+
+.btn-close-modal {
+    border-radius: 50%;
+    width: 30px !important;
+    height: 30px !important;
+    color: white;
+    border: unset;
+}
+
+.modal-header {
+    h5 {
+        display: flex;
+        min-height: 60px !important;
+        align-items: center;
+    }
+}
+
+.md-form.input-form {
+    input,
+    select,
+    textarea {
+        background: transparent !important;
+        border: none;
+        border-bottom: 1.5px solid #d63447 !important;
+        padding: 0 5px;
+        border-radius: unset !important;
+        position: relative;
+        color: white;
+        outline: unset !important;
+        &:focus {
+            color: white !important;
+            border: inherit;
+            border-radius: 0.3rem !important;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+    select {
+        background: #212121 !important;
+    }
+    label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: white;
+        padding: 0px 0px 0px 3px;
+        pointer-events: none;
+        transition: .2s;
+        &.active {
+            transform: translateY(-32px) scale(0.8) !important;
+            color: #d63447 !important;
+            padding: 5px;
+            font-weight: bold;
+            background: white !important;
+            border-radius: 0.5rem;
+        }
+    }
+}
+
+.md-form input[type="text"]:not(.browser-default):focus:not([readonly])+label,
+.md-form input[type="email"]:not(.browser-default):focus:not([readonly])+label {
+    transform: translateY(-32px) scale(0.8) !important;
+    color: #d63447 !important;
+    padding: 5px;
+    font-weight: bold;
+    background: white !important;
+    border-radius: 0.5rem;
 }

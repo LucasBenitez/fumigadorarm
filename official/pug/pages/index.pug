@@ -3,11 +3,12 @@ block append config
     - titlePage = "Inicio "
     - 
         let arrBug = [
-            {name: "CONTROL DE MOSQUITOS Y PREVENCIÓN DEL DENGUE", htmlView: 'mosquito.html', img: 'mosquito.svg'},
-            {name: "PROGRAMA DE MANEJO INTEGRADO DE PLAGAS", htmlView: 'aves.html', img: 'paloma.svg'},
-            {name: "CONTROL DE PALOMAS Y MURCIELAGOS", htmlView: 'murcielago.html', img: 'bat.svg'},
-            {name: "DESINSECTACIÓN", htmlView: 'cucarachas.html', img: 'cockroach.svg'},
-            {name: "Desratizaciones", htmlView: 'raton.html', img: 'rat.svg'},
+            {name: "CONTROL DE MOSQUITOS Y PREVENCIÓN DEL DENGUE", htmlView: 'mosquito.html', img: 'mosquito.svg', modal: modals[0]},
+            {name: "PROGRAMA DE MANEJO INTEGRADO DE PLAGAS", htmlView: 'aves.html', img: 'fas fa-globe-americas', modal: modals[1]},
+            {name: "CONTROL DE PALOMAS Y MURCIELAGOS", htmlView: 'murcielago.html', img: 'bat.svg', modal: modals[2]},
+            {name: "DESINSECTACIÓN", htmlView: 'cucarachas.html', img: 'cockroach.svg',modal: modals[3]},
+            {name: "Desratizaciones", htmlView: 'raton.html', img: 'rat.svg', modal: modals[4]},
+            {name: "DESINFECCIÓN", htmlView: '', img: 'desinfeccion.svg', modal: modals[5]}
             ]
 
 block append content
@@ -31,15 +32,11 @@ block append content
     section.grey.lighten-2
         .container.py-3
             .row
-                .col-sm-12.col-md-6.my-2
+                .col.my-2
                     .d-flex.justify-content-center.align-items-center
                         i.fas.fa-check.fa-2x.text-black-50.mr-3
                         p.mb-0.text-black-50 Servicios realizados por técnicos homologados de plantilla
-                .col-sm-12.col-md-6.my-2
-                    .d-flex.justify-content-center.align-items-center
-                        i.fas.fa-star.fa-2x.text-black-50.mr-3
-                        p.mb-0.text-black-50 Damos servicio a más de 30.000 clientes en España desde 1981
-    
+
     section
         .container
             .row
@@ -48,13 +45,14 @@ block append content
                         h2 Estoy buscando una solución para eliminar mi problema de 
                             select.custom-select.custom-select-sm.text-center.w-25
                                 each bug,i in bugs
-                                    option(value=`${i}`).font-24= bug
+                                    option(value=`${i}`)= bug
                             |  en mi
                             select.custom-select.custom-select-sm.text-center.w-25
                                 each place,i in places
-                                    option(value=`${i}`).font-24= place
+                                    option(value=`${i}`)= place
                             |  lo antes posible.
                         a(href="contacto.html").btn.btn-danger.rounded-xl.my-3 Consultar ahora
+    
     section.degrade-black
         .container.py-2
             .row

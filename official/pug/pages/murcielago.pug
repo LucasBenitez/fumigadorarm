@@ -1,5 +1,6 @@
 extends ../templates/template.pug
 block append config
+    - titlePage = "Murcielagos"  
     -subMenu = ["Murciélago","Ambiente y distribución","Hábitos alimenticios","Importancia sanitaria"]
     -
         objBug = {
@@ -31,7 +32,6 @@ block append config
    
 
 block append content
-    +sub-navbar(subMenu)
     
     section.img-service-cucarachas
         +text-bug(objBug)
@@ -48,12 +48,6 @@ block append content
                                 |Los murciélagos son los únicos mamíferos dotados de alas y adaptados al vuelo activo. Se caracterizan por poseer un de emisión y recepción de ultrasonidos, llamado ecolocalización. Este sistema les permite orientarse y capturar a sus presas.
                                 | Son de hábitos nocturnos o crepusculares. Ocupan diversos tipos de refugios, tanto naturales como artificiales, y la mayoría de las especies forman colonias. Si bien pueden ser portadores del virus de la rabia, los murciélagos aportan un importante beneficio al hombre ya que son los más eficaces predadores de insectos nocturnos.
 
-                            
-    section
-        .container
-            .row
-                +card-factory(cards)
-
     +steps
 
     section
@@ -67,19 +61,19 @@ block append content
                             p
                             |Especies que pertenecen a la familia Vespetilionidae:
                             ul
-                            li Murciélago Pardo Chico (Eptesicus diminutus)
-                            li Murciélago Pardo Común (Eptesicus furinalis)
-                            li Murciélago Escarchado Chico (Lasiurus blossevillii)
-                            li Murciélago Escarchado Grande (Lasiurus cinereus)
-                            li Murciélago Leonado (Lasiurus ega)
-                            li Murcielaguito de Vientre Blanco (Myotis albescens)
-                            li Murcielaguito Amarillento (Myotis levis)
+                                li Murciélago Pardo Chico (Eptesicus diminutus)
+                                li Murciélago Pardo Común (Eptesicus furinalis)
+                                li Murciélago Escarchado Chico (Lasiurus blossevillii)
+                                li Murciélago Escarchado Grande (Lasiurus cinereus)
+                                li Murciélago Leonado (Lasiurus ega)
+                                li Murcielaguito de Vientre Blanco (Myotis albescens)
+                                li Murcielaguito Amarillento (Myotis levis)
                             p
                             |Especies que pertenecen a la familia Molossidae:
                             ul
-                            li Murciélago Moloso Orejas Anchas Pardo (Eumops bonariensis)
-                            li Murciélago Moloso Cola Gruesa Chico (Molossus molossus)
-                            li Murciélago Moloso Común (Tadarida brasiliensis)
+                                li Murciélago Moloso Orejas Anchas Pardo (Eumops bonariensis)
+                                li Murciélago Moloso Cola Gruesa Chico (Molossus molossus)
+                                li Murciélago Moloso Común (Tadarida brasiliensis)
                             
     section
         .container
@@ -89,11 +83,11 @@ block append content
                         h2.solid-red.font-weight-bold.text-uppercase.spacing-3 Ambiente y distribución
                         hr.grey.lighten-1.pt-1.w-100.rounded-lg
                         .text-black-50.px-2
-                            p
-                            |Las 10 especies se pueden encontrar en toda la zona de la región del AMBA, exceptuando al Murciélago Pardo Chico que se encuentra exclusivamente en el Delta del Paraná, y al Murciélago Leonado que solo se encuentra en la zona norte y oeste de la región.
+                        p
+                        |Las 10 especies se pueden encontrar en toda la zona de la región del AMBA, exceptuando al Murciélago Pardo Chico que se encuentra exclusivamente en el Delta del Paraná, y al Murciélago Leonado que solo se encuentra en la zona norte y oeste de la región.
 
-                            p
-                            |Se distribuyen de forma diferente en la Ciudad y la provincia de Buenos Aires debido a las distintas preferencias por el lugar de refugio. Aquellas que prefieren prefieren refugiarse entre las ramas o debajo de la corteza de los árboles, como el Murciélago Escarchado Grande (Lasiurus cinereus), el Escarchado Chico (Lasiurus blossevillii) y el Murciélago Leonado (Lasiurus ega), son más abundantes en la provincia de Buenos Aires, mientras que las que prefieren refugiarse en viviendas y edificios, como el Murciélago Moloso Común (T. brasiliensis), son más abundantes en Capital Federal, constituyéndose una plaga para la población del lugar.
+                        p
+                        |Se distribuyen de forma diferente en la Ciudad y la provincia de Buenos Aires debido a las distintas preferencias por el lugar de refugio. Aquellas que prefieren prefieren refugiarse entre las ramas o debajo de la corteza de los árboles, como el Murciélago Escarchado Grande (Lasiurus cinereus), el Escarchado Chico (Lasiurus blossevillii) y el Murciélago Leonado (Lasiurus ega), son más abundantes en la provincia de Buenos Aires, mientras que las que prefieren refugiarse en viviendas y edificios, como el Murciélago Moloso Común (T. brasiliensis), son más abundantes en Capital Federal, constituyéndose una plaga para la población del lugar.
     section
         .container
             .row

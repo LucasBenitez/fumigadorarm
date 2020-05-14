@@ -1,6 +1,6 @@
 extends ../templates/template.pug
 block append config
-    - titlePage = "Aves "
+    - titlePage = "Palomas"
     -subMenu = ["Aves","Ahuyentar aves","Control de aves","Riesgos de enfermedades producidas por las aves", "Especies de aves comunes"]
     -
         objBug = {
@@ -25,7 +25,7 @@ block append config
             {
                 image: "aves-3",
                 title: "Control de plagas de aves",
-                description: "Rentokil ofrece servicios de control de plagas de aves en 5 sencillos pasos",
+                description: "Ofrecemos servicios de control de plagas de aves en 5 sencillos pasos",
                 link: "#"
             }
         ]
@@ -45,8 +45,7 @@ block append config
 
     
 
-block append content   
-    +sub-navbar(subMenu)
+block append content  
     
     section.img-service-aves
         +text-bug(objBug)
@@ -65,11 +64,11 @@ block append content
                             p
                                 |Éstas son sólo algunas de las pautas que han adoptado en este proceso de adaptación:
                                 ul
-                                li Palomas y gaviotas utilizan azoteas y otras zonas aparentemente inhóspitas de los edificios para anidar. 
-                                li Balcones, cornisas, canalones o chimeneas son las zonas preferidas por estas aves. 
-                                li A las gaviotas, en particular, les gusta agruparse en grandes zonas planas como las azoteas. 
-                                li Cualquier hueco superior a 25 mm puede servir como puerta de entrada a estas plagas. 
-                                li Las palomas prefieren posarse sobre tejados a dos aguas, e incluso pueden romper o mover las tejas para anidar en el interior.
+                                    li Palomas y gaviotas utilizan azoteas y otras zonas aparentemente inhóspitas de los edificios para anidar. 
+                                    li Balcones, cornisas, canalones o chimeneas son las zonas preferidas por estas aves. 
+                                    li A las gaviotas, en particular, les gusta agruparse en grandes zonas planas como las azoteas. 
+                                    li Cualquier hueco superior a 25 mm puede servir como puerta de entrada a estas plagas. 
+                                    li Las palomas prefieren posarse sobre tejados a dos aguas, e incluso pueden romper o mover las tejas para anidar en el interior.
                                 
                             p
                                 |Cuanto más tiempo se les permita a las aves anidar o posarse en esa zona, más difícil será poder romper esa costumbre. Además las palomas son animales gregarios y una pequeña bandada puede convertirse rápidamente en un grupo de varios centenares de ejemplares.
@@ -84,11 +83,11 @@ block append content
                         p
                             |Reconocer los síntomas de una plaga y adoptar una solución con rapidez puede reducir drásticamente el tiempo necesario (y el dinero) para controlar eficazmente una plaga de palomas y gaviotas.
                         ul
-                        li Aves posadas continuamente en tejados y cornisas. 
-                        li Nidos de Aves. 
-                        li Mercancias dañadas por picotazos o excrementos. 
-                        li Excrementos concentrados en las zonas de posamiento. 
-                        li Restos de nidos y plumas pueden bloquear canalones y sistemas de drenaje, lo que puede conducir a daños húmedo.
+                            li Aves posadas continuamente en tejados y cornisas. 
+                            li Nidos de Aves. 
+                            li Mercancias dañadas por picotazos o excrementos. 
+                            li Excrementos concentrados en las zonas de posamiento. 
+                            li Restos de nidos y plumas pueden bloquear canalones y sistemas de drenaje, lo que puede conducir a daños húmedo.
     section
         .container
             .row
@@ -106,22 +105,16 @@ block append content
             .row
                 .col-12
                     .text-left.my-5
-                        h2.solid-red.font-weight-bold.text-uppercase.spacing-3 Sistemas de control de aves de Rentokil
+                        h2.solid-red.font-weight-bold.text-uppercase.spacing-3 Sistemas de control de aves
                         hr.grey.lighten-1.pt-1.w-100.rounded-lg
                         .text-black-50.px-2
                         p
                             |Las aves pueden convertirse en un problema que implica tomar medidas de control y protección lo más rápidamente posible. La presencia de palomas y gaviotas en su edificio pueden:
                             ul
-                            li Ser un peligro para la salud, propagando enfermedades como la Ornitosis o bacterias como el E.Colli o la salmonella. 
-                            li Afectar gravemente a edificios y vehículos con sus excrementos. Además con la acumulación de excrementos de palomas y gaviotas sobre superficies aumentan los riesgos de caídas por resbalones. 
-                            li Atascar bajantes, desagües y canalones, atraer a sus nidos a otras plagas, como ácaros, escarabajos o pulgas y que luego estas, se extiendan por otras zonas del edificio. 
-                            li Atacar a clientes y empleados al sentirse las palomas y las gaviotas amenazadas durante la época de cría.
-                            
-    
-    section
-        .container
-            .row
-                +card-factory(cards)
+                                li Ser un peligro para la salud, propagando enfermedades como la Ornitosis o bacterias como el E.Colli o la salmonella. 
+                                li Afectar gravemente a edificios y vehículos con sus excrementos. Además con la acumulación de excrementos de palomas y gaviotas sobre superficies aumentan los riesgos de caídas por resbalones. 
+                                li Atascar bajantes, desagües y canalones, atraer a sus nidos a otras plagas, como ácaros, escarabajos o pulgas y que luego estas, se extiendan por otras zonas del edificio. 
+                                li Atacar a clientes y empleados al sentirse las palomas y las gaviotas amenazadas durante la época de cría.
 
     +steps
 
@@ -130,41 +123,16 @@ block append content
             .row
                 .col-12
                     .text-left.my-5
-                        h2.solid-red.font-weight-bold.text-uppercase.spacing-3 Sistemas de control de aves de Rentokil
+                        h2.solid-red.font-weight-bold.text-uppercase.spacing-3 Sistemas de control de aves
                         hr.grey.lighten-1.pt-1.w-100.rounded-lg
                         .text-black-50.px-2
                             p 
                             |Las aves pueden convertirse en un problema que implica tomar medidas de control y protección lo más rápidamente posible. La presencia de palomas y gaviotas en su edificio pueden:
                             ul
-                            li Ser un peligro para la salud, propagando enfermedades como la Ornitosis o bacterias como el E.Colli o la salmonella. 
-                            li Afectar gravemente a edificios y vehículos con sus excrementos. Además con la acumulación de excrementos de palomas y gaviotas sobre superficies aumentan los riesgos de caídas por resbalones. 
-                            li Atascar bajantes, desagües y canalones, atraer a sus nidos a otras plagas, como ácaros, escarabajos o pulgas y que luego estas, se extiendan por otras zonas del edificio. 
-                            li Atacar a clientes y empleados al sentirse las palomas y las gaviotas amenazadas durante la época de cría.
-    -
-        cards1 = [
-            {
-                image: "aves-4",
-                title: "Mallas antipalomas",
-                description: "Impida el paso de plagas de aves con el sistema de mallas antipalomas",
-                link: "#"
-            },
-            {
-                image: "aves-5",
-                title: "Púas antipalomas",
-                description: "Las púas antipalomas son uno de los métodos más económicos para evitar el posamiento de aves en fachadas",
-                link: "#"
-            },
-            {
-                image: "aves-6",
-                title: "Sistema electroestático",
-                description: "Este sistema es uno de los más eficaces para evitar el posamiento de palomas gracias al uso de impulsos electromagnéticos",
-                link: "#"
-            }
-        ]
-    section
-        .container
-            .row
-                +card-factory(cards1)
+                                li Ser un peligro para la salud, propagando enfermedades como la Ornitosis o bacterias como el E.Colli o la salmonella. 
+                                li Afectar gravemente a edificios y vehículos con sus excrementos. Además con la acumulación de excrementos de palomas y gaviotas sobre superficies aumentan los riesgos de caídas por resbalones. 
+                                li Atascar bajantes, desagües y canalones, atraer a sus nidos a otras plagas, como ácaros, escarabajos o pulgas y que luego estas, se extiendan por otras zonas del edificio. 
+                                li Atacar a clientes y empleados al sentirse las palomas y las gaviotas amenazadas durante la época de cría.
 
     section#questions
         .container

@@ -169,17 +169,21 @@ mixin carrousel(objSlides)
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 mixin labelFactory(nameLabel, idInput, typeInput)
-  .md-form.mb-0
-    input(type="#{typeInput}", name="#{idInput}", id="#{idInput}", placeholder=`${nameLabel}`).form-control.rounded-lg.p-2
+  .md-form.mb-0.input-form
+    input(type=`${typeInput}`, name=`${idInput}`, id=`${idInput}`).form-control.rounded-lg.p-2
+    label= nameLabel
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------
 mixin form(bugs, places)
-  <div class="container">
+  <div class="container my-3">
     <div class="row">
-        .col-md-9.mb-md-0.mb-5.d-flex.align-items-strech
-          .card.card-body.rounded-xl.my-2
-            <h2 class="text-uppercase font-weight-bold text-center my-1 red text-white rounded-xl py-3 spacing-2">Formulario de contacto</h2>
-            form(name="contact-form")#contact-form.my-auto
+        .col-md-8.mb-md-0.mb-5.d-flex.align-items-strech
+          .card.card-body.rounded-xl.my-2.bg-dark.position-relative
+            .text-center.my-1.red.text-white.rounded-xl.py-3.position-relative.z-index-3.z-depth-1
+              h3.text-uppercase.font-weight-bold.spacing-4.m-0.d-inline-block contacto
+            .white.w-75.mx-auto.position-absolute.top-75.left-0.right-0.rounded-lg
+              p.text-center.pt-4.pb-3.font-12.m-0.text-uppercase.font-weight.bold.spacing-2.mt-1 su consulta no molesta
+            form(name="contact-form")#contact-form.mt-4.pt-5
               .row
                 .col-md-6
                   +labelFactory("Nombre", "name", "text")
@@ -187,52 +191,65 @@ mixin form(bugs, places)
                   +labelFactory("Correo Electronico", "email", "email")
               .row
                 .col-md-6
-                  select#bugSelect.browser-default.custom-select.my-2
-                    option(selected) Seleccione plaga
-                    each bug,i in bugs
-                      option(value=`${i}`)=bug
+                  .md-form.input-form
+                    select#bugSelect.browser-default.custom-select.my-2.text-white
+                      option(selected) Seleccione plaga
+                      each bug,i in bugs
+                        option(value=`${i}`)=bug
                 .col-md-6
-                  select#placeSelect.browser-default.custom-select.my-2
-                    option(selected) Seleccione lugar
-                    each place,i in places
-                      option(value=`${i}`)=place
+                  .md-form.input-form
+                    select#placeSelect.browser-default.custom-select.my-2.text-white
+                      option(selected) Seleccione lugar
+                      each place,i in places
+                        option(value=`${i}`)=place
               .row
                 .col-md-12
-                  .md-form.my-2
-                    textarea(type="text", id="message", name="message", row="2", placeholder="Tu mensaje").form-control.rounded-lg.p-2.mb-0
-              
+                  .md-form.input-form.my-5
+                    textarea(type="text", id="message", name="message", row="2").form-control.rounded-lg.p-2.mb-0
+                    label Tu mensaje
               .row
                 .col-md-12
                   .text-center.mt-3
-                    input(type="submit", value="Enviar consulta").btn.btn-success.rounded-xl
+                    input(type="submit", value="Enviar consulta").btn.red.rounded-xl.font-weight-bold.text-white.spacing-1
 
           #response
 
-        .col-md-3.text-center.d-flex.align-items-strech
-          .card.card-body.rounded-xl.my-2
+        .col-md-4.text-center.d-flex.align-items-center
+          .card.card-body.rounded-xl.my-2.red
             ul.list-unstyled.mb-0.my-auto
               li
-                .card.card-body.square-element-3.d-inline-flex.p-2.align-items-center.bg-primary.rounded-lg.z-depth-1-half
+                .card.card-body.square-element-3.d-inline-flex.p-2.align-items-center.bg-dark.rounded-lg.z-depth-1-half
                   i.fas.fa-map-marker-alt.fa-md.text-white.my-auto
-                p.mt-2.mb-4.font-14 Ramos Mejia, Buenos Aires, Argentina
+                p.mt-2.mb-4.font-14.text-white Ramos Mejia, Buenos Aires, Argentina
               li
-                .card.card-body.square-element-3.d-inline-flex.p-2.align-items-center.bg-success.rounded.lg.z-depth-1-half
+                .card.card-body.square-element-3.d-inline-flex.p-2.align-items-center.bg-dark.rounded.lg.z-depth-1-half
                   i.fas.fa-phone.fa-md.text-white.my-auto
                 .mt-2.mb-4
-                  p.font-14.mb-1 4650-8202
-                  a(target="_blank",href="https://wa.me/5491131039463?text=Hola%2C%20que%20tal%3F%2C%20vengo%20desde%20tu%20web%20y%20necesito%20que%20me%20asesores..").btn.btn-success.rounded-lg.btn-sm #[i.fab.fa-whatsapp.fa-lg.mb-2] #[p.mb-0 Hablenos por Whatsapp]
+                  p.font-14.mb-1.text-white 4650-8202
+                  a(target="_blank",href="https://wa.me/5491131039463?text=Hola%2C%20que%20tal%3F%2C%20vengo%20desde%20tu%20web%20y%20necesito%20que%20me%20asesores..").btn.bg-dark.rounded-lg.btn-sm.text-white #[i.fab.fa-whatsapp.fa-lg.mb-2] #[p.mb-0 Hablenos por Whatsapp]
               li
-                .card.card-body.square-element-3.d-inline-flex.p-2.align-items-center.bg-info.rounded-lg.z-depth-1-half
+                .card.card-body.square-element-3.d-inline-flex.p-2.align-items-center.bg-dark.rounded-lg.z-depth-1-half
                   i.fas.fa-envelope.fa-md.text-white.my-auto
-                p.mt-2.mb-4.font-14 info@fumigacionesrm.com.ar
+                p.mt-2.mb-4.font-14.text-white info@fumigacionesrm.com.ar
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------
 mixin card-bug(bugs)
   each bug in bugs
     .col-sm-6.col-md-4.my-3.d-flex.align-items-streach.justify-content-streach
-      a(href=`${bug.htmlView}`).card.text-center.w-100.rounded-xl
-        .card-body.d-flex.align-items-center.justify-content-center
+      a(data-toggle="modal", data-target=`#${bug.modal.id}`).card.text-center.w-100.rounded-xl
+        .card-body.d-flex.align-items-start.justify-content-center
           .my-3
             .square-element-6.mx-auto.rounded-circle.bg-dark.d-flex.align-items-center.justify-content-center.p-2
-              img(src=`./img/svg/${bug.img}`, alt=`${bug.name}`).img-plague
+              if(bug.img.split(".")[1] != "svg")
+                i(class=`${bug.img} text-white fa-4x`)
+              else
+                img(src=`./img/svg/${bug.img}`, alt=`${bug.name}`).img-plague
             hr.w-75.mx-auto.my-4.danger-color.pt-1.rounded
             p.lato.text-uppercase.font-18.mb-1.text-dark.spacing-2.my-auto #{bug.name}
+    .modal.fade(id=`${bug.modal.id}`, tabindex="-1", role="dialog", aria-labelledby=`${bug.modal.title}`, aria-hidden="true")
+      .modal-dialog.modal-dialog-centered(role="document")
+        .modal-content.rounded-xl
+          .modal-header.d-flex.align-items-center.justify-content-center.flex-column.text-center.position-relative.text-white.bg-dark.rounded-xl-top
+            button(type="button", data-dismiss="modal", aria-label="Close").btn-close-modal.red.z-depth-1.position-absolute.bottom-85
+              span(aria-hidden="true") &times;
+            h5.modal-title.text-uppercase.font-weight-bold.spacing-2.mt-2(id=`modalTitle${bug.modal.id}`)= bug.modal.title
+          .modal-body(id=`${bug.modal.id}-content`) #{bug.modal.description}

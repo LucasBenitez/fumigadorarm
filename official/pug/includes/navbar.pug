@@ -21,9 +21,8 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Servicios</a>
                 <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="./servicios.html">Todos los servicios</a>
-                <a class="dropdown-item" href="#">Control de plagas</a>
-                <a class="dropdown-item" href="#">Nosotros</a>
+                    each bug,i in bugsAndServices
+                        a(href=`${bug.htmlView}`, id=`${bug.id}`).dropdown-item= bug.name
                 </div>
             </li>
             </ul>
