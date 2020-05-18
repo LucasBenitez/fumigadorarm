@@ -43,14 +43,14 @@ $('#formContact').submit(function(e) {
     e.preventDefault();
     const postValue = {
         name: $('#name').val(),
-        email: $('#email').val(),
+        email: $('#emailInput').val(),
         phone: $('#phone').val(),
         message: $('#message').val(),
     };
     //console.log(postValue)
     $.post('php/addMessage.php', postValue, function(res) {
         console.log(res)
-        if(res === '200'){
+        if (res === '200') {
             $('#successMessage').html(templateSuccess)
             $('#formContact').addClass('d-none')
             $('#successMessageContainer').removeClass('d-none').addClass('fadeInLeft');

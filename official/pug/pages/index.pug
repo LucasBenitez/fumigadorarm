@@ -42,7 +42,7 @@ block append content
             .row
                 .col-sm-12.col-md-7.mx-auto
                     .text-center.py-5
-                        h2 Estoy buscando una solución para eliminar mi problema de 
+                        h2 Estoy buscando una solución para controlar mi problema de 
                             select.custom-select.custom-select-sm.text-center.w-25
                                 each bug,i in bugs
                                     option(value=`${i}`)= bug
@@ -55,6 +55,9 @@ block append content
     
     section.degrade-black
         .container.py-2
+            .row
+                .col-12.text-center
+                    h2.lato.text-uppercase.text-white.spacing-4.font-weight-bold.my-5 nuestros servicios
             .row
                 +card-bug(arrBug)
 

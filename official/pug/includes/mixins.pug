@@ -170,7 +170,7 @@ mixin carrousel(objSlides)
 
 mixin labelFactory(nameLabel, idInput, typeInput)
   .md-form.mb-0.input-form
-    input(type=`${typeInput}`, name=`${idInput}`, id=`${idInput}`).form-control.rounded-lg.p-2
+    input(type=`${typeInput}`, name=`${idInput}`, id=`${idInput}`, required).form-control.rounded-lg.py-2
     label= nameLabel
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -178,30 +178,33 @@ mixin form(bugs, places)
   <div class="container my-3">
     <div class="row">
         .col-md-8.mb-md-0.mb-5.d-flex.align-items-strech
-          .card.card-body.rounded-xl.my-2.bg-dark.position-relative
+          .card.card-body.rounded-xl.my-2.bg-dark.position-relative#form-container
             .text-center.my-1.red.text-white.rounded-xl.py-3.position-relative.z-index-3.z-depth-1
               h3.text-uppercase.font-weight-bold.spacing-4.m-0.d-inline-block contacto
             .white.w-75.mx-auto.position-absolute.top-75.left-0.right-0.rounded-lg
               p.text-center.pt-4.pb-3.font-12.m-0.text-uppercase.font-weight.bold.spacing-2.mt-1 su consulta no molesta
             form(name="contact-form")#contact-form.mt-4.pt-5
               .row
-                .col-md-6
+                .col-sm-12.col-md-6
                   +labelFactory("Nombre", "name", "text")
-                .col-md-6
-                  +labelFactory("Correo Electronico", "email", "email")
+                .col-sm-12.col-md-6
+                  +labelFactory("Correo Electronico", "emailInput", "email")
+              .row.my-2
+                .col-sm-12.col-md-12.mx-auto
+                  +labelFactory("Telefono:", "phone", "text")
               .row
                 .col-md-6
                   .md-form.input-form
                     select#bugSelect.browser-default.custom-select.my-2.text-white
-                      option(selected) Seleccione plaga
-                      each bug,i in bugs
-                        option(value=`${i}`)=bug
+                      option(selected, disabled) Seleccione servicio
+                      each service,i in services
+                        option(value=`${service}`)=service
                 .col-md-6
                   .md-form.input-form
                     select#placeSelect.browser-default.custom-select.my-2.text-white
-                      option(selected) Seleccione lugar
+                      option(selected, disabled) Seleccione lugar
                       each place,i in places
-                        option(value=`${i}`)=place
+                        option(value=`${place}`)=place
               .row
                 .col-md-12
                   .md-form.input-form.my-5
@@ -212,7 +215,7 @@ mixin form(bugs, places)
                   .text-center.mt-3
                     input(type="submit", value="Enviar consulta").btn.red.rounded-xl.font-weight-bold.text-white.spacing-1
 
-          #response
+          #response.my-auto
 
         .col-md-4.text-center.d-flex.align-items-center
           .card.card-body.rounded-xl.my-2.red
